@@ -11,12 +11,14 @@ function Possibilities() {
 				<button className="PT-btn">
 					<p>آموزش موسیقی</p>
 				</button>
+				<div className="p-dark" />
 			</div>
 			<div className="p-concert">
 				<div style={{ background: `url(${concert})` }} />
 				<button className="PC-btn">
 					<p>کنسرت</p>
 				</button>
+				<div className="p-dark" />
 			</div>
 		</div>
 	);
