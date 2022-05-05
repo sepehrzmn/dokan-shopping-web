@@ -1,5 +1,7 @@
 .categoryHome {
-	height: 60vh;
+	height: 80vh;
+	padding: 50px;
+	overflow: hidden;
 }
 .categoryHome > h4 {
 	font-size: 1.5rem;
@@ -11,6 +13,7 @@
 	display: flex;
 	gap: 5rem;
 	justify-content: space-around;
+	margin-bottom: 5rem;
 }
 .p-c-item {
 	width: 15%;
@@ -27,7 +30,20 @@
 	cursor: pointer;
 }
 .p-c-item:hover {
-	background: #ffa724;
-	box-shadow: 0 0 10px #ff9900;
+	background: #d1d1d1;
+	box-shadow: 0 0 10px #838383;
 	transition: all 0.5s;
+	color: #727272;
+}
+.categoryHome .swiper {
+	width: 100%;
+	overflow: visible !important;
+	height: 70%;
+}
+.categoryHome .swiper-pagination-bullet-active {
+	background: rgb(255, 111, 0);
+}
+.categoryHome .swiper-pagination-bullet {
+	height: 10px;
+	width: 10px;
 }

@@ -5,6 +5,7 @@ import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
+import Product from "../Product/Product";
 
 function CategoryHome() {
 	return (
@@ -21,27 +22,30 @@ function CategoryHome() {
 										color="white"
 										fontSize={80}
 									/>
-
 									<span>ویالون</span>
 								</div>
 							);
 						})}
 				</div>
+				<Swiper
+					modules={[Pagination, A11y]}
+					spaceBetween={20}
+					slidesPerView={5}
+					pagination={{ clickable: true }}
+				>
+					{Array(16)
+						.fill("")
+						.map((x, index) => {
+							return (
+								<>
+									<SwiperSlide key={index}>
+										<Product />
+									</SwiperSlide>
+								</>
+							);
+						})}
+				</Swiper>
 			</div>
-			<Swiper
-				modules={[Pagination, A11y]}
-				style={{ padding: "0 10px" }}
-				spaceBetween={50}
-				slidesPerView={3}
-				pagination={{ clickable: true }}
-			>
-				{Array(16)
-					.fill("")
-					.map((x, index) => {
-						return <></>;
-					})}
-				<SwiperSlide>Slide 1</SwiperSlide>
-			</Swiper>
 		</>
 	);
 }

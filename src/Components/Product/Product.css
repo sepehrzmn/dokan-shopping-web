@@ -1,0 +1,55 @@
+.product {
+	width: 16rem;
+	background: linear-gradient(180deg, #d9300ab5 50%, #fdfdfd 50%);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 20px;
+	margin: 30px 0;
+	cursor: pointer;
+}
+.p-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.p-media > img {
+	width: 80%;
+}
+.p-body {
+	padding: 10px;
+	background-color: white;
+	border-radius: 20px;
+}
+.p-title {
+	font-size: 1.1rem;
+	font-weight: 100;
+}
+.p-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.p-info > span {
+	color: crimson;
+	font-size: 13px;
+}
+.product:hover {
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
+.p-score {
+	font-size: 14px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.p-score > span {
+	margin-top: 8px;
+}
+.p-price {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 20px;
+}
