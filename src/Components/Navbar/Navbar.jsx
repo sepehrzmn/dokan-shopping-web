@@ -1,16 +1,13 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "../../assets/image/logo.png";
 import { Link } from "react-router-dom";
+import Dokan from "../Dokan/Dokan";
 
 function Navbar() {
 	return (
 		<nav className="nav">
 			<div className="nav-content">
-				<div className="logo">
-					<img src={logo} alt="دکان" />
-					<span>دکان</span>
-				</div>
+				<Dokan />
 				<ul className="menu">
 					<li className="active">
 						<Link to="/">خانه</Link>

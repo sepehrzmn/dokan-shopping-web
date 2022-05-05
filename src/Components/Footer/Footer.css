@@ -1,0 +1,49 @@
+footer {
+	background: rgb(38, 38, 38);
+	margin-top: 40px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around !important;
+	padding: 20px 0;
+}
+.f-info {
+	max-width: 30%;
+	font-size: 15px;
+}
+
+.f-contact {
+	max-width: 20%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.f-contact > li {
+	background: rgb(174, 119, 43);
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.f-menu {
+	max-width: 20%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.f-menu > li {
+	border-right: 2px solid rgb(203, 123, 11);
+	margin: 10px 0;
+	padding: 10px;
+	background: transparent;
+}
+.f-menu > li:hover {
+	background: linear-gradient(to left, rgb(203, 123, 11), rgb(38, 38, 38) 50%);
+	transition: all 0.5s;
+}
+.f-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
