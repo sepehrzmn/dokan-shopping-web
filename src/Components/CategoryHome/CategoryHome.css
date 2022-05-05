@@ -1,0 +1,33 @@
+.categoryHome {
+	height: 60vh;
+}
+.categoryHome > h4 {
+	font-size: 1.5rem;
+	font-weight: 100;
+	padding-right: 50px;
+}
+
+.popular-category {
+	display: flex;
+	gap: 5rem;
+	justify-content: space-around;
+}
+.p-c-item {
+	width: 15%;
+	height: 10rem;
+	background: #727272;
+	border-radius: 10px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 8px #727272;
+	/* flex-direction: column; */
+	gap: 15px;
+	cursor: pointer;
+}
+.p-c-item:hover {
+	background: #ffa724;
+	box-shadow: 0 0 10px #ff9900;
+	transition: all 0.5s;
+}

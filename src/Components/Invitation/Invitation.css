@@ -10,13 +10,12 @@
 	font-weight: 400;
 	color: #d2b525;
 }
-.invitation > img {
+.invitation > div > img {
+	left: -10rem;
 	position: absolute;
-	left: 36rem;
-	top: 12rem;
 }
 .invitation > div {
-	margin-top: 80px;
+	position: relative;
 }
 .invitation > p {
 	margin-top: -10px;
@@ -31,6 +30,7 @@
 	cursor: pointer;
 	min-width: 80px;
 	text-align: center;
+	margin-top: 90px;
 }
 .btn-invitation {
 	padding: 10px;
@@ -42,4 +42,5 @@
 	min-width: 60px;
 	min-width: 80px;
 	text-align: center;
+	margin-top: 90px;
 }
