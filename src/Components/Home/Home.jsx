@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryHome from "../CategoryHome/CategoryHome";
+import Comments from "../Comments/Comments";
 import Introduction from "../Introduction/Introduction";
 import Invitation from "../Invitation/Invitation";
 import Possibilities from "../Possibilities/Possibilities";
@@ -13,6 +14,7 @@ function Home() {
 			<Invitation />
 			<CategoryHome />
 			<Possibilities />
+			<Comments />
 		</>
 	);
 }
