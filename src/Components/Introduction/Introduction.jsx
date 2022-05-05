@@ -21,9 +21,9 @@ function Introduction() {
 				</div>
 			</div>
 			<div className="intro-left">
-				<img src={setar} />
-				<img src={vector1} />
-				<img src={vector2} />
+				<img src={setar} alt="setar" />
+				<img src={vector1} alt="vector" />
+				<img src={vector2} alt="vector" />
 			</div>
 		</div>
 	);

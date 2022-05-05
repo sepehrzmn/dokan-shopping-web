@@ -13,3 +13,6 @@ a {
 	display: block;
 	height: 100px;
 }
+button {
+	all: unset;
+}

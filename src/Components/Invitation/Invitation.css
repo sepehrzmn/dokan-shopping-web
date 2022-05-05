@@ -1,0 +1,45 @@
+.invitation {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.invitation > h2 {
+	font-weight: 400;
+	color: #d2b525;
+}
+.invitation > img {
+	position: absolute;
+	left: 36rem;
+	top: 12rem;
+}
+.invitation > div {
+	margin-top: 80px;
+}
+.invitation > p {
+	margin-top: -10px;
+}
+.btn-product {
+	padding: 10px;
+	background: rgba(18, 18, 18, 1);
+	border-radius: 10px;
+	color: white;
+	font-size: 18px;
+	box-shadow: 0 0 15px rgba(18, 18, 18, 0.8);
+	cursor: pointer;
+	min-width: 80px;
+	text-align: center;
+}
+.btn-invitation {
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+	box-shadow: 0 0 15px rgba(171, 171, 171, 0.245);
+	margin-right: 20px;
+	cursor: pointer;
+	min-width: 60px;
+	min-width: 80px;
+	text-align: center;
+}
