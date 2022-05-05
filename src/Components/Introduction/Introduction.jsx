@@ -3,7 +3,6 @@ import "./Introduction.css";
 import setar from "../../assets/image/setar.png";
 import vector1 from "../../assets/image/Vector1.png";
 import vector2 from "../../assets/image/Vector2.png";
-import logoActive from "../../assets/image/logoActive.png";
 
 function Introduction() {
 	return (
