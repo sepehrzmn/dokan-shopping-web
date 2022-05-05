@@ -2,6 +2,7 @@ import React from "react";
 import CategoryHome from "../CategoryHome/CategoryHome";
 import Introduction from "../Introduction/Introduction";
 import Invitation from "../Invitation/Invitation";
+import Possibilities from "../Possibilities/Possibilities";
 import "./Home.css";
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
 			<Introduction />
 			<Invitation />
 			<CategoryHome />
+			<Possibilities />
 		</>
 	);
 }
