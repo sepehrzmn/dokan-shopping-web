@@ -1,4 +1,13 @@
 .comments {
 	height: 50vh;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		rgba(8, 127, 218, 0.914) 10vw
+	);
 }
