@@ -1,5 +1,5 @@
 .comments {
-	height: 50vh;
+	height: 60vh;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -8,6 +8,7 @@
 	background: linear-gradient(
 		to bottom,
 		#ffffff,
-		rgba(8, 127, 218, 0.914) 10vw
+		rgba(13, 127, 214, 0.721) 40%,
+		#ffffff
 	);
 }

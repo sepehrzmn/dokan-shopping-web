@@ -1,5 +1,5 @@
 .invitation {
-	height: 50vh;
+	height: 40vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,4 +43,28 @@
 	min-width: 80px;
 	text-align: center;
 	margin-top: 90px;
+}
+
+.invitation > :nth-child(4) {
+	position: absolute;
+	left: 5rem;
+	transform: rotateZ(50deg);
+}
+.invitation > :nth-child(5) {
+	position: absolute;
+	right: 5rem;
+	top: 0;
+	transform: rotateZ(-50deg);
+}
+.invitation > :nth-child(6) {
+	position: absolute;
+	left: 30rem;
+	top: 0;
+	transform: rotateZ(-50deg);
+}
+.invitation > :nth-child(7) {
+	position: absolute;
+	right: 30rem;
+	bottom: 0;
+	transform: rotateZ(70deg);
 }

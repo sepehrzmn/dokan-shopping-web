@@ -29,12 +29,7 @@
 	gap: 15px;
 	cursor: pointer;
 }
-.p-c-item:hover {
-	background: #d1d1d1;
-	box-shadow: 0 0 10px #838383;
-	transition: all 0.5s;
-	color: #727272;
-}
+
 .categoryHome .swiper {
 	width: 100%;
 	overflow: visible !important;

@@ -3,7 +3,7 @@ import "./comments.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow } from "swiper";
 import Comment from "../Comment/Comment";
 
 function Comments() {

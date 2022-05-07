@@ -40,12 +40,38 @@
 	top: 0;
 }
 .intro-left > :nth-child(2) {
-	z-index: 1;
+	z-index: -2;
 	transform: scale(0.8);
 	top: 0;
 }
 .intro-left > :nth-child(3) {
-	z-index: 2;
-	transform: scale(0.7);
+	z-index: -1;
+	transform: scale(0.65);
 	top: 0;
+	left: 10rem;
+}
+.intro-left > :nth-child(4) {
+	z-index: 2;
+	position: absolute;
+	transform: rotateZ(10deg);
+	top: 10rem;
+}
+.intro-left > :nth-child(5) {
+	z-index: 2;
+	position: absolute;
+	transform: rotateZ(-50deg);
+	top: 10rem;
+	left: 10rem;
+}
+.intro-left > :nth-child(6) {
+	z-index: 2;
+	position: absolute;
+	transform: rotateZ(-50deg);
+	top: 30rem;
+	left: 10rem;
+}
+.int-scroll {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
 }

@@ -32,10 +32,10 @@
 	color: crimson;
 	font-size: 13px;
 }
-.product:hover {
+/* .product:hover {
 	transform: scale(1.05);
 	transition: all 0.5s;
-}
+} */
 .p-score {
 	font-size: 14px;
 	display: inline-flex;

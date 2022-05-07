@@ -6,12 +6,28 @@ footer {
 	align-items: center;
 	justify-content: space-around !important;
 	padding: 20px 0;
+	position: relative;
+}
+footer > :nth-child(1) {
+	position: absolute;
+	top: -40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: #ffffff;
+	border-radius: 50%;
+	color: rgb(38, 38, 38);
+	cursor: pointer;
 }
 .f-info {
 	max-width: 30%;
 	font-size: 15px;
 }
-
+.f-info > p {
+	margin-top: -5px;
+	text-align: justify;
+}
 .f-contact {
 	max-width: 20%;
 	list-style: none;

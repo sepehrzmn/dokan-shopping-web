@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
 import Product from "../Product/Product";
+import { motion } from "framer-motion";
 
 function CategoryHome() {
 	return (
@@ -16,14 +17,22 @@ function CategoryHome() {
 						.fill("")
 						.map((x, index) => {
 							return (
-								<div key={index} className="p-c-item">
+								<motion.div
+									initial={{ background: "#727272" }}
+									whileHover={{
+										background: "#d1d1d1",
+										color: "#727272",
+									}}
+									key={index}
+									className="p-c-item"
+								>
 									<Icon
 										icon="emojione-monotone:violin"
 										color="white"
 										fontSize={80}
 									/>
 									<span>ویالون</span>
-								</div>
+								</motion.div>
 							);
 						})}
 				</div>

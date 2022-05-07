@@ -3,11 +3,24 @@ import "./Product.css";
 import violin from "../../assets/image/violin.png";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Product() {
 	return (
 		<Link to="/product">
-			<div className="product">
+			<motion.div
+				initial={{
+					fontSize: "16px",
+				}}
+				whileHover={{
+					scale: 1.05,
+					fontSize: "22px",
+				}}
+				transition={{
+					type: "keyframes",
+				}}
+				className="product"
+			>
 				<div className="p-media">
 					<img src={violin} />
 				</div>
@@ -25,7 +38,7 @@ function Product() {
 						<span>تومان</span>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</Link>
 	);
 }

@@ -5,6 +5,10 @@
 	padding: 0;
 	position: fixed;
 	width: 100%;
+	background: white;
+	/* box-shadow: 0 0 10px rgb(89, 89, 89); */
+	z-index: 5;
+	transition: 0.5s ease;
 }
 .nav-content {
 	width: 95%;
@@ -22,6 +26,7 @@
 	display: flex;
 	gap: 5rem;
 	list-style: none;
+	width: 30%;
 }
 .logo > img {
 	max-width: 80px;
