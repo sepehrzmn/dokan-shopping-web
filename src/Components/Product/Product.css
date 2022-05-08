@@ -53,3 +53,8 @@
 	gap: 0.5rem;
 	margin-top: 20px;
 }
+@media screen and (max-width: 650px) {
+	.product {
+		width: 14rem;
+	}
+}

@@ -7,6 +7,7 @@ import { EffectCoverflow } from "swiper";
 import Comment from "../Comment/Comment";
 
 function Comments() {
+	console.log(window.innerWidth);
 	return (
 		<div className="comments">
 			<Swiper
@@ -15,8 +16,8 @@ function Comments() {
 				centeredSlides={true}
 				slidesPerView={"auto"}
 				style={{
-					height: "50%",
-					width: "40%",
+					height: "max-content",
+					width: window.screen.width > 800 ? "40%" : "90%",
 					overflow: "visible",
 				}}
 				coverflowEffect={{
@@ -38,6 +39,24 @@ function Comments() {
 							</SwiperSlide>
 						);
 					})}
+				<SwiperSlide style={{ height: "max-content" }}>
+					<div className="comment">
+						<div className="c-title">
+							<img
+								src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=80"
+								alt="user"
+							/>
+							<h4>سپهر</h4>
+						</div>
+						<div className="c-body">
+							<p>
+								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+								استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+								در ستون و سطرآنچنان که لازم است، و برای
+							</p>
+						</div>
+					</div>
+				</SwiperSlide>
 			</Swiper>
 		</div>
 	);

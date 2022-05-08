@@ -40,6 +40,39 @@ function CategoryHome() {
 					modules={[Pagination, A11y]}
 					spaceBetween={20}
 					slidesPerView={5}
+					style={{ padding: "40px 10px" }}
+					breakpoints={{
+						"@0.0": {
+							slidesPerView: 2,
+							spaceBetween: 50,
+						},
+						"@0.75": {
+							slidesPerView: 2,
+							spaceBetween: 10,
+						},
+
+						"@0.80": {
+							slidesPerView: 2,
+							spaceBetween: 10,
+						},
+						"@1.08": {
+							slidesPerView: 2,
+							spaceBetween: 5,
+						},
+						"@1.1": {
+							slidesPerView: 3,
+							spaceBetween: 40,
+						},
+						"@1.4": {
+							slidesPerView: 4,
+							spaceBetween: 40,
+						},
+						"@1.67": {
+							slidesPerView: 5,
+							spaceBetween: 10,
+						},
+					}}
+					allowTouchMove={true}
 					pagination={{ clickable: true }}
 				>
 					{Array(16)
@@ -47,7 +80,7 @@ function CategoryHome() {
 						.map((x, index) => {
 							return (
 								<>
-									<SwiperSlide key={index}>
+									<SwiperSlide style={{ height: "30rem" }} key={index}>
 										<Product />
 									</SwiperSlide>
 								</>

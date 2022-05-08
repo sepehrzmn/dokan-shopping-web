@@ -7,6 +7,8 @@ footer {
 	justify-content: space-around !important;
 	padding: 20px 0;
 	position: relative;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 footer > :nth-child(1) {
 	position: absolute;
@@ -23,7 +25,9 @@ footer > :nth-child(1) {
 .f-info {
 	max-width: 30%;
 	font-size: 15px;
+	min-width: 20rem;
 }
+
 .f-info > p {
 	margin-top: -5px;
 	text-align: justify;
@@ -33,6 +37,7 @@ footer > :nth-child(1) {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	min-width: 15rem;
 }
 
 .f-contact > li {
@@ -46,6 +51,7 @@ footer > :nth-child(1) {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	min-width: 15rem;
 }
 
 .f-menu > li {
@@ -62,4 +68,5 @@ footer > :nth-child(1) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 70% !important;
 }

@@ -7,6 +7,7 @@
 	overflow: hidden;
 	gap: 1rem;
 	color: rgb(227, 227, 227);
+	flex-wrap: wrap;
 }
 .possibilities > div {
 	height: 11.8rem;
@@ -90,4 +91,13 @@
 .p-tutorial:hover.p-tutorial > :nth-child(3) {
 	opacity: 1;
 	transition: all 0.5s;
+}
+@media screen and (max-width: 960px) {
+	.possibilities {
+		height: 80vh;
+	}
+	.possibilities > div {
+		height: 11.8rem;
+		width: 100%;
+	}
 }

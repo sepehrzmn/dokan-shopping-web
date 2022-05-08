@@ -9,6 +9,8 @@ let lastKnownScrollPosition = 0;
 function Navbar() {
 	const [hidden, setHidden] = useState(true);
 	const [shadow, setShadow] = useState(false);
+	const [menuMobile, setMenuMobile] = useState(false);
+
 	function checkScroll() {
 		newKnownScrollPosition = window.scrollY;
 		console.log(newKnownScrollPosition);
@@ -53,6 +55,19 @@ function Navbar() {
 					</li>
 				</ul>
 				<div className="user">user</div>
+				<div className="menuMobile" onClick={() => setMenuMobile(!menuMobile)}>
+					<span
+						style={
+							menuMobile ? { top: "50%", transform: "rotate(40deg)" } : null
+						}
+					></span>
+					<span style={menuMobile ? { display: "none" } : null}></span>
+					<span
+						style={
+							menuMobile ? { top: "50%", transform: "rotate(-40deg)" } : null
+						}
+					></span>
+				</div>
 			</div>
 		</nav>
 	);

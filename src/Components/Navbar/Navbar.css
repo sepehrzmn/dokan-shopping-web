@@ -6,12 +6,11 @@
 	position: fixed;
 	width: 100%;
 	background: white;
-	/* box-shadow: 0 0 10px rgb(89, 89, 89); */
 	z-index: 5;
 	transition: 0.5s ease;
 }
 .nav-content {
-	width: 95%;
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -21,12 +20,12 @@
 	font-size: 1.5em;
 	display: flex;
 	gap: 0.5rem;
+	width: 10%;
 }
 .menu {
 	display: flex;
 	gap: 5rem;
 	list-style: none;
-	width: 30%;
 }
 .logo > img {
 	max-width: 80px;
@@ -50,4 +49,47 @@
 	bottom: 0;
 
 	position: absolute;
+}
+.user {
+	border: 1px solid red;
+	width: 10%;
+}
+.menuMobile {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+	.menu,
+	.user {
+		display: none;
+	}
+
+	.nav-content {
+		justify-content: space-between !important;
+	}
+	.menuMobile {
+		display: block;
+		position: relative;
+		width: 2.5rem;
+		height: 2rem;
+		padding-top: 1px;
+	}
+	.menuMobile > span {
+		position: absolute;
+		display: block;
+		height: 3px;
+		width: 2.5rem;
+		left: 0px;
+		transition: all 0.5s ease;
+		background: linear-gradient(180deg, #9b892e, #d9b60e 50%);
+	}
+	.menuMobile > :nth-child(1) {
+		top: 2px;
+	}
+	.menuMobile > :nth-child(2) {
+		top: 14px;
+	}
+	.menuMobile > :nth-child(3) {
+		top: 26px;
+	}
 }

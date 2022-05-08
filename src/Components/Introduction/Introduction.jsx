@@ -42,10 +42,11 @@ function Introduction() {
 					</div>
 				</div>
 				<div className="intro-left">
-					<motion.div
+					<motion.img
 						whileInView={{
 							rotate: [5, -5, 5],
-							scale: [0.7, 0.85, 0.7],
+							scale:
+								window.screen.width > 750 ? [0.7, 0.85, 0.7] : [0.5, 0.6, 0.5],
 						}}
 						transition={{
 							type: "spring",
@@ -53,9 +54,9 @@ function Introduction() {
 							stiffness: 10,
 							repeat: Infinity,
 						}}
-					>
-						<img src={setar} alt="setar" />
-					</motion.div>
+						src={setar}
+						alt="setar"
+					/>
 
 					<img src={vector1} alt="vector" />
 					<img src={vector2} alt="vector" />

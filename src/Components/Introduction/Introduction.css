@@ -2,6 +2,7 @@
 	display: flex;
 	align-items: center;
 	height: 90vh;
+	overflow: hidden;
 }
 .introduction > div {
 	flex: 1;
@@ -15,17 +16,22 @@
 	line-height: 50px;
 }
 .intro-right > :nth-child(3) {
-	padding-left: 80px;
 	font-family: "Noto Nastaliq Urdu";
 	padding-top: 30px;
+	text-align: center;
+	padding-left: 50px;
 }
 .persian-music {
-	width: 80%;
+	width: 70%;
 	height: max-content;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 	font-family: "Noto Nastaliq Urdu";
+}
+.persian-music > span {
+	padding: 0 10px;
 }
 
 .intro-left {
@@ -36,19 +42,18 @@
 	position: absolute;
 }
 .intro-left > :nth-child(1) {
-	z-index: 3;
-	top: 0;
+	z-index: 1;
+	padding-right: 40px;
 }
 .intro-left > :nth-child(2) {
-	z-index: -2;
+	z-index: 0;
 	transform: scale(0.8);
-	top: 0;
+	padding-top: 100px;
+	padding-right: 17px;
 }
 .intro-left > :nth-child(3) {
-	z-index: -1;
+	z-index: 0;
 	transform: scale(0.65);
-	top: 0;
-	left: 10rem;
 }
 .intro-left > :nth-child(4) {
 	z-index: 2;
@@ -74,4 +79,71 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+}
+@media screen and (max-width: 1500px) {
+	.introduction {
+		flex-direction: column;
+		height: 150vh;
+	}
+	.introduction > div {
+		width: 100%;
+	}
+	.intro-right {
+		height: 10% !important;
+		gap: 0;
+		position: static;
+	}
+	.intro-left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40% !important;
+	}
+	.intro-left > :nth-child(1) {
+		padding-right: 0;
+	}
+
+	.intro-left > :nth-child(2) {
+		padding-top: 0;
+		padding-right: 0;
+	}
+
+	.intro-left > :nth-child(4) {
+		z-index: 0;
+		position: absolute;
+		transform: rotateZ(10deg);
+		top: -10rem;
+		right: 10rem;
+	}
+	.intro-left > :nth-child(5) {
+		z-index: 0;
+		position: absolute;
+		transform: rotateZ(-50deg);
+		top: 15rem;
+		left: 80%;
+	}
+	.intro-left > :nth-child(6) {
+		z-index: 0;
+		position: absolute;
+		transform: rotateZ(-50deg);
+		top: 5rem;
+		left: 10%;
+	}
+}
+@media screen and (max-width: 750px) {
+	.intro-left > :nth-child(1) {
+		z-index: 1;
+		transform: scale(0.1);
+	}
+	.intro-left > :nth-child(2) {
+		z-index: 0;
+		transform: scale(0.6);
+	}
+	.intro-left > :nth-child(3) {
+		z-index: 0;
+		transform: scale(0.5);
+	}
+	.int-scroll {
+		display: none;
+	}
 }

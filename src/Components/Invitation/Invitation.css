@@ -5,14 +5,16 @@
 	align-items: center;
 	flex-direction: column;
 	position: relative;
+	overflow: hidden;
 }
 .invitation > h2 {
 	font-weight: 400;
 	color: #d2b525;
 }
 .invitation > div > img {
-	left: -10rem;
+	left: -70%;
 	position: absolute;
+	z-index: 1;
 }
 .invitation > div {
 	position: relative;
@@ -46,25 +48,48 @@
 }
 
 .invitation > :nth-child(4) {
+	z-index: 0;
 	position: absolute;
 	left: 5rem;
 	transform: rotateZ(50deg);
+	opacity: 0.3;
 }
 .invitation > :nth-child(5) {
+	z-index: 0;
 	position: absolute;
 	right: 5rem;
-	top: 0;
+	top: 7%;
 	transform: rotateZ(-50deg);
+	opacity: 0.5;
 }
 .invitation > :nth-child(6) {
+	z-index: 0;
 	position: absolute;
-	left: 30rem;
-	top: 0;
+	left: 10%;
+	top: 7%;
 	transform: rotateZ(-50deg);
+	opacity: 0.4;
 }
 .invitation > :nth-child(7) {
+	z-index: 0;
 	position: absolute;
-	right: 30rem;
+	right: 20%;
 	bottom: 0;
 	transform: rotateZ(70deg);
+	opacity: 0.2;
+}
+@media screen and (max-width: 950px) {
+	.invitation > :nth-child(6) {
+		left: 5%;
+	}
+	.invitation {
+		font-size: 1rem;
+		padding: 10px 20px;
+		height: 70vh;
+	}
+	.invitation > div > img {
+		transform: scale(0.8);
+		left: -40%;
+		top: -10px;
+	}
 }
