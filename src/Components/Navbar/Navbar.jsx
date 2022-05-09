@@ -17,7 +17,7 @@ function Navbar() {
 
 		if (lastKnownScrollPosition > newKnownScrollPosition) {
 			setHidden(true);
-			if (newKnownScrollPosition == 0) {
+			if (newKnownScrollPosition === 0) {
 				setShadow(false);
 			} else {
 				setShadow(true);
@@ -48,7 +48,7 @@ function Navbar() {
 						<Link to="/">خانه</Link>
 					</li>
 					<li>
-						<Link to="/category">دسته بندی</Link>
+						<Link to="/shopping">فروشگاه</Link>
 					</li>
 					<li>
 						<Link to="/mag">وبلاگ</Link>
