@@ -1,0 +1,34 @@
+.SS-item {
+	display: flex;
+	background: #58c4ec;
+	border-radius: 10px;
+}
+.SSI-brand {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	color: white;
+	padding: 10px;
+}
+.SSI-brand > img {
+	max-width: 200px;
+}
+.SSI-brand > h2 {
+	font-size: 1.2rem;
+	font-weight: 100;
+}
+.SSI-product {
+	background: linear-gradient(to left, transparent, #dedede 20%);
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border-radius: 10px;
+}
+.SSI-product > img {
+	max-width: 500px;
+}

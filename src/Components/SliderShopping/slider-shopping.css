@@ -1,0 +1,19 @@
+.slider-shopping {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.slider-shopping .swiper {
+	width: 100%;
+	height: 70%;
+}
+.slider-shopping .swiper-pagination-bullet-active {
+	background: rgb(0, 170, 255);
+	width: 20px !important;
+	border-radius: 5rem;
+}
+.slider-shopping .swiper-pagination-bullet {
+	height: 8px;
+	width: 8px;
+}

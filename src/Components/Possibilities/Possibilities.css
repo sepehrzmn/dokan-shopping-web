@@ -84,17 +84,18 @@
 	top: 0;
 	opacity: 0;
 }
-.p-concert:hover.p-concert > :nth-child(3) {
+/* .p-concert:hover.p-concert > :nth-child(3) {
 	opacity: 1;
 	transition: all 0.5s;
-}
+} */
 .p-tutorial:hover.p-tutorial > :nth-child(3) {
 	opacity: 1;
 	transition: all 0.5s;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 750px) {
 	.possibilities {
 		height: 80vh;
+		padding: 10px;
 	}
 	.possibilities > div {
 		height: 11.8rem;
