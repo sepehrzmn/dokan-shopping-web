@@ -5,8 +5,9 @@
 	padding: 10px;
 }
 .slider-shopping .swiper {
-	width: 100%;
-	height: 70%;
+	width: 95%;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(18, 18, 18, 0.5);
 }
 .slider-shopping .swiper-pagination-bullet-active {
 	background: rgb(0, 170, 255);
