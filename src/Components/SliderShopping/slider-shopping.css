@@ -18,4 +18,5 @@
 .slider-shopping .swiper-pagination-bullet {
 	height: 8px;
 	width: 8px;
+	cursor: default !important;
 }
