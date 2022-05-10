@@ -1,11 +1,11 @@
 .proposal {
-	height: 50vh;
+	height: 55vh;
 	justify-content: center;
 	align-items: center;
 }
 .proposal .swiper {
 	width: 90%;
-	height: 100%;
+	height: 90%;
 	background-color: rgba(227, 45, 81, 0.44);
 	border-radius: 20px;
 	padding: 10px;

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
 import Items from "./Items/Items";
 import "./slider-shopping.css";
 
 function SliderShopping() {
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
+
 	return (
 		<div className="slider-shopping">
 			<Swiper
