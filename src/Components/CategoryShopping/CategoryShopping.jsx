@@ -41,7 +41,7 @@ function CategoryShopping() {
 					<div className="SCSC-item-3">
 						<img src={xylophone} alt="xylophone" />
 					</div>
-					<span>کوبه ای ساز </span>
+					<span>ساز کوبه ای </span>
 				</motion.div>
 				<motion.div
 					whileHover={{

@@ -22,7 +22,7 @@ function Product() {
 				className="product"
 			>
 				<div className="p-media">
-					<img src={violin} />
+					<img src={violin} alt="violin" />
 				</div>
 				<div className="p-body">
 					<h2 className="p-title"> ويولن سندنر مدل CV6-4/4</h2>

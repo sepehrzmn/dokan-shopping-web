@@ -13,7 +13,6 @@ function Navbar() {
 
 	function checkScroll() {
 		newKnownScrollPosition = window.scrollY;
-		console.log(newKnownScrollPosition);
 
 		if (lastKnownScrollPosition > newKnownScrollPosition) {
 			setHidden(true);
