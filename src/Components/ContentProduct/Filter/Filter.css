@@ -8,6 +8,7 @@
 	padding: 10px 0;
 	position: sticky !important;
 	top: 20px;
+	height: max-content;
 }
 .filter > section {
 	/* border-top: 1px solid rgb(149, 149, 149); */
