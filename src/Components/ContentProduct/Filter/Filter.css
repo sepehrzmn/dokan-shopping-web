@@ -11,7 +11,6 @@
 	height: max-content;
 }
 .filter > section {
-	/* border-top: 1px solid rgb(149, 149, 149); */
 	padding: 0 0 10px 0;
 	overflow: hidden;
 	margin-top: 20px;
@@ -116,34 +115,7 @@
 	align-items: center;
 	font-size: 1rem;
 }
-/* .slider-parent {
-	position: relative;
-	width: 100%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
 
-.slider-parent > input {
-	width: 90%;
-}
-.buble > input {
-	box-shadow: 0 0 2px rgb(65, 170, 255);
-	padding: 0 10px 0 0 !important;
-	font-size: 1rem;
-	font-weight: 100;
-	border-radius: 5px;
-	height: 30px;
-	text-align: center;
-}
-
-.buble {
-	position: absolute;
-	bottom: -50px;
-	display: flex;
-	gap: 1rem;
-} */
 .box-slider {
 	position: relative;
 	width: 90%;

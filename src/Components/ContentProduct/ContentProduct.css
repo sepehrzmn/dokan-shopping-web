@@ -1,4 +1,10 @@
 .ContentProduct {
 	display: flex;
 	justify-content: space-between;
+	overflow: auto;
+}
+@media screen and (max-width: 760px) {
+	.ContentProduct {
+		height: 80vh;
+	}
 }

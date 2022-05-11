@@ -2,11 +2,7 @@ import React from "react";
 import "./Items.css";
 import Product from "../../Product/Product";
 function Items() {
-	return (
-		<div>
-			<Product />
-		</div>
-	);
+	return <Product />;
 }
 
 export default Items;

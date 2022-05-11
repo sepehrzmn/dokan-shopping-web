@@ -38,3 +38,49 @@
 	font-size: 14px;
 	justify-self: flex-end;
 }
+@media screen and (max-width: 1000px) {
+	.SSI-product > img {
+		transform: scale(0.8);
+	}
+	.SSI-brand {
+		transform: scale(0.8);
+	}
+}
+@media screen and (max-width: 850px) {
+	.SSI-product {
+		width: 50%;
+	}
+	.SSI-product > img {
+		transform: scale(0.6);
+	}
+	.SSI-brand {
+		transform: scale(0.8);
+	}
+}
+@media screen and (max-width: 600px) {
+	.SSI-product {
+		width: 40%;
+	}
+	.SSI-product > img {
+		transform: scale(0.5);
+	}
+	.SSI-brand {
+		transform: scale(0.75);
+	}
+}
+@media screen and (max-width: 550px) {
+	.SS-item {
+		flex-direction: column;
+		height: 90vh;
+	}
+	.SSI-brand {
+		transform: scale(0.8);
+	}
+	.SSI-product {
+		width: 100%;
+		background: linear-gradient(to bottom, transparent, #dedede 20%);
+	}
+	.SSI-product > img {
+		transform: scale(0.5);
+	}
+}

@@ -10,9 +10,10 @@
 }
 .SCS-content {
 	width: 90%;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	display: flex;
+	flex-wrap: wrap;
 }
 .SCS-content > div {
 	width: 8rem;
@@ -109,4 +110,9 @@
 .SCSC-item-7 {
 	background: #ffc1c1;
 	margin: 0 auto;
+}
+@media screen and (max-width: 1250px) {
+	.SCS-content > div {
+		transform: scale(0.8);
+	}
 }

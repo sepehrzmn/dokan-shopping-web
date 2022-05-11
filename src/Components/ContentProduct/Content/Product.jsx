@@ -24,11 +24,10 @@ function Product() {
 						</div>
 						<motion.div
 							whileHover={{
-								scale: 1.1,
-								rotateX: 360,
+								scale: 1.4,
 							}}
-							transition={{
-								duration: 0.5,
+							whileTap={{
+								scale: 1.4,
 							}}
 						>
 							<Icon icon="el:shopping-cart" fontSize={20} />{" "}

@@ -1,26 +1,44 @@
 .proposal {
-	height: 55vh;
 	justify-content: center;
 	align-items: center;
+	margin: 40px 0;
+	height: max-content;
 }
 .proposal .swiper {
 	width: 90%;
-	height: 90%;
+	height: 50vh;
 	background-color: rgba(227, 45, 81, 0.44);
 	border-radius: 20px;
-	padding: 10px;
+	padding: 20px;
 	box-shadow: 0 0 10px rgba(18, 18, 18, 0.5);
 }
 .SPR-title {
 	width: 16rem;
 	border-radius: 20px;
 	margin: 30px 0;
-	height: 85%;
 	padding: 10px;
 	font-size: 1.5rem;
+	height: 385px !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: rgb(255, 255, 255);
 	flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+	.proposal .swiper {
+		width: 70%;
+	}
+
+	.proposal .swiper .swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media screen and (max-height: 880px) {
+	.proposal .swiper {
+		height: 55vh;
+	}
 }

@@ -4,7 +4,6 @@
 	margin-left: 10px;
 	border-radius: 10px;
 	box-shadow: 0 0 1px rgba(18, 18, 18, 0.1);
-	background: #fff;
 	width: calc(100% - 280px);
 }
 
@@ -13,6 +12,7 @@
 	flex-wrap: wrap;
 	gap: 0.8rem 0.8rem;
 	padding: 10px;
+	justify-content: space-evenly;
 }
 .SPC__product {
 	width: 24.25%;
@@ -23,6 +23,8 @@
 	border-radius: 10px;
 	flex-direction: column;
 	position: relative;
+	min-width: 300px;
+	background: white;
 }
 
 .SPC__product > img {
@@ -107,4 +109,9 @@
 	> div:nth-of-type(2)
 	> :nth-child(1) {
 	height: 100%;
+}
+@media screen and (max-width: 650px) {
+	.SCC__content {
+		justify-content: initial;
+	}
 }

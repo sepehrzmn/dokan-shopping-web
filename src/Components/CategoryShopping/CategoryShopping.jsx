@@ -10,13 +10,22 @@ import theremin from "../../assets/image/theremin.png";
 import { motion } from "framer-motion";
 
 function CategoryShopping() {
+	const anime = {
+		normal: {
+			scale: window.screen.width > 1250 ? 1 : 0.8,
+		},
+		hover: {
+			scale: window.screen.width > 1250 ? 1.2 : 1,
+		},
+	};
 	return (
 		<div className="category-shopping">
 			<div className="SCS-content">
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-1">
 						<img src={pennFlute} alt="penn Flute" />
@@ -24,9 +33,10 @@ function CategoryShopping() {
 					<span>ساز افکتی</span>
 				</motion.div>
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-2">
 						<img src={bassoon} alt="bassoon" />
@@ -34,9 +44,10 @@ function CategoryShopping() {
 					<span>ساز بادی</span>
 				</motion.div>
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-3">
 						<img src={xylophone} alt="xylophone" />
@@ -44,9 +55,10 @@ function CategoryShopping() {
 					<span>ساز کوبه ای </span>
 				</motion.div>
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-4">
 						<img src={harmonica2} alt="harmonica" />
@@ -54,9 +66,10 @@ function CategoryShopping() {
 					<span>ساز دهنی</span>
 				</motion.div>
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-5">
 						<img src={piano} alt="piano" />
@@ -64,20 +77,21 @@ function CategoryShopping() {
 					<span>ساز صفحه کلید دار</span>
 				</motion.div>
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-6">
 						<img src={guitar} alt="guitar" />
 					</div>
 					<span>ساز زهی</span>
 				</motion.div>
-
 				<motion.div
-					whileHover={{
-						scale: 1.2,
-					}}
+					initial="normal"
+					whileHover="hover"
+					whileTap="hover"
+					variants={anime}
 				>
 					<div className="SCSC-item-7">
 						<img src={theremin} alt="theremin" />

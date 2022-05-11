@@ -3,20 +3,38 @@ import "./special.css";
 import violin2 from "../../assets/image/violin2.png";
 import { motion } from "framer-motion";
 function Special() {
+	const anime = {
+		normal: {
+			width:
+				window.screen.width > 810
+					? "30%"
+					: window.screen.width > 450
+					? "60%"
+					: "70%",
+		},
+		hover: {
+			width:
+				window.screen.width > 810
+					? "35%"
+					: window.screen.width > 810
+					? "80%"
+					: "90%",
+		},
+		transition: {
+			duration: 0.5,
+			type: "keyframes",
+		},
+	};
+
 	return (
 		<div className="special">
 			<div className="SSe-content">
 				<motion.div
-					initial={{
-						width: "30%",
-					}}
-					whileHover={{
-						width: "35%",
-					}}
-					transition={{
-						duration: 0.5,
-						type: "keyframes",
-					}}
+					initial="normal"
+					whileHover="hover"
+					transition="transition"
+					whileTap="hover"
+					variants={anime}
 					className="item-1"
 				>
 					<div>
@@ -26,16 +44,11 @@ function Special() {
 					<img src={violin2} alt="violin2" />
 				</motion.div>
 				<motion.div
-					initial={{
-						width: "30%",
-					}}
-					whileHover={{
-						width: "35%",
-					}}
-					transition={{
-						duration: 0.5,
-						type: "keyframes",
-					}}
+					initial="normal"
+					whileHover="hover"
+					transition="transition"
+					whileTap="hover"
+					variants={anime}
 					className="item-2"
 				>
 					{" "}
@@ -46,16 +59,11 @@ function Special() {
 					<img src={violin2} alt="violin2" />
 				</motion.div>
 				<motion.div
-					initial={{
-						width: "30%",
-					}}
-					whileHover={{
-						width: "35%",
-					}}
-					transition={{
-						duration: 0.5,
-						type: "keyframes",
-					}}
+					initial="normal"
+					whileHover="hover"
+					transition="transition"
+					whileTap="hover"
+					variants={anime}
 					className="item-3"
 				>
 					{" "}

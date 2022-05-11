@@ -7,7 +7,12 @@ import PriceRange from "./PriceRange";
 import Available from "./Available";
 function Filter() {
 	return (
-		<aside className="filter">
+		<aside
+			className="filter"
+			style={{
+				transform: "translate(0, 000%)",
+			}}
+		>
 			<Search />
 			<Category />
 			<Brand />
