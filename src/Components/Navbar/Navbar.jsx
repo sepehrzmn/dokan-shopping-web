@@ -49,9 +49,6 @@ function Navbar() {
 					<li>
 						<Link to="/shopping">فروشگاه</Link>
 					</li>
-					<li>
-						<Link to="/mag">وبلاگ</Link>
-					</li>
 				</ul>
 				<div className="user">user</div>
 				<div className="menuMobile" onClick={() => setMenuMobile(!menuMobile)}>
