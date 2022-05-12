@@ -5,16 +5,13 @@ import Category from "./Category";
 import Brand from "./Brand";
 import PriceRange from "./PriceRange";
 import Available from "./Available";
-function Filter() {
+import PropTypes from "prop-types";
+
+function Filter({ category }) {
 	return (
-		<aside
-			className="filter"
-			style={{
-				transform: "translate(0, 000%)",
-			}}
-		>
+		<aside className="filter">
 			<Search />
-			<Category />
+			{category ? <Category /> : null}
 			<Brand />
 			<PriceRange />
 			<Available />
@@ -22,4 +19,7 @@ function Filter() {
 	);
 }
 
+Filter.protoTypes = {
+	category: PropTypes.bool.isRequired,
+};
 export default Filter;

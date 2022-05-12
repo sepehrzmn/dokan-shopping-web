@@ -110,8 +110,11 @@
 	> :nth-child(1) {
 	height: 100%;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 760px) {
 	.SCC__content {
 		justify-content: initial;
+	}
+	.content {
+		width: 80%;
 	}
 }

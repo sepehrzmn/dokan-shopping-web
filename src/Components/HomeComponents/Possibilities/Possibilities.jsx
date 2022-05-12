@@ -1,7 +1,7 @@
 import React from "react";
 import "./Possibilities.css";
-import concert from "../../assets/image/concert.png";
-import tutorial from "../../assets/image/tutorial.png";
+import concert from "../../../assets/image/concert.png";
+import tutorial from "../../../assets/image/tutorial.png";
 import { motion } from "framer-motion";
 
 function Possibilities() {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Invitation.css";
-import arrowDown from "../../assets/image/arrowDown.png";
+import arrowDown from "../../../assets/image/arrowDown.png";
 import { Icon } from "@iconify/react";
 
 function Invitation() {

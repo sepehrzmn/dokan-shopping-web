@@ -8,6 +8,7 @@ import piano from "../../assets/image/piano-2.png";
 import guitar from "../../assets/image/guitar-2.png";
 import theremin from "../../assets/image/theremin.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function CategoryShopping() {
 	const anime = {
@@ -15,89 +16,45 @@ function CategoryShopping() {
 			scale: window.screen.width > 1250 ? 1 : 0.8,
 		},
 		hover: {
-			scale: window.screen.width > 1250 ? 1.2 : 1,
+			scale: window.screen.width > 1250 ? 1.15 : 1,
 		},
 	};
+
+	const categories = [
+		{ name: "ساز افکتی", slug: "effect", icons: pennFlute, id: 1 },
+		{ name: "ساز بادی", slug: "windy", icons: bassoon, id: 2 },
+		{ name: "ساز کوبه ای", slug: "kobe", icons: xylophone, id: 3 },
+		{ name: "ساز دهنی", slug: "harmonica", icons: harmonica2, id: 4 },
+		{ name: "ساز صفحه کلید دار", slug: "keyboardMaker", icons: piano, id: 5 },
+		{ name: "ساز زهی", slug: "stringed", icons: guitar, id: 6 },
+		{ name: "ساز الکترونیک", slug: "electronic", icons: theremin, id: 7 },
+	];
+
 	return (
 		<div className="category-shopping">
 			<div className="SCS-content">
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-1">
-						<img src={pennFlute} alt="penn Flute" />
-					</div>
-					<span>ساز افکتی</span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-2">
-						<img src={bassoon} alt="bassoon" />
-					</div>
-					<span>ساز بادی</span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-3">
-						<img src={xylophone} alt="xylophone" />
-					</div>
-					<span>ساز کوبه ای </span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-4">
-						<img src={harmonica2} alt="harmonica" />
-					</div>
-					<span>ساز دهنی</span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-5">
-						<img src={piano} alt="piano" />
-					</div>
-					<span>ساز صفحه کلید دار</span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-6">
-						<img src={guitar} alt="guitar" />
-					</div>
-					<span>ساز زهی</span>
-				</motion.div>
-				<motion.div
-					initial="normal"
-					whileHover="hover"
-					whileTap="hover"
-					variants={anime}
-				>
-					<div className="SCSC-item-7">
-						<img src={theremin} alt="theremin" />
-					</div>
-					<span>ساز الکترونیک</span>
-				</motion.div>
+				{categories.map((category) => {
+					return (
+						<motion.div
+							initial="normal"
+							whileHover="hover"
+							whileTap="hover"
+							variants={anime}
+							key={category.id}
+						>
+							<Link
+								to={`/shopping/${category.slug}`}
+								style={{ padding: "5px 0" }}
+								state={{ title: category.name, id: category.id }}
+							>
+								<div className={`SCSC-item-${category.id}`}>
+									<img src={category.icons} alt={category.slug} />
+								</div>
+								<span>{category.name}</span>
+							</Link>
+						</motion.div>
+					);
+				})}
 			</div>
 		</div>
 	);

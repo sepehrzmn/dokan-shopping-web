@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Introduction.css";
-import setar from "../../assets/image/setar.png";
-import vector1 from "../../assets/image/Vector1.png";
-import vector2 from "../../assets/image/Vector2.png";
+import setar from "../../../assets/image/setar.png";
+import vector1 from "../../../assets/image/Vector1.png";
+import vector2 from "../../../assets/image/Vector2.png";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 

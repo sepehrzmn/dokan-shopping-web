@@ -5,7 +5,7 @@ import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
-import Product from "../Product/Product";
+import Product from "../../Product/Product";
 import { motion } from "framer-motion";
 
 function CategoryHome() {
