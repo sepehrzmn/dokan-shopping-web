@@ -1,0 +1,22 @@
+.slide-product {
+	min-width: 100px;
+	overflow: hidden;
+	width: 36%;
+	height: 100%;
+	min-width: 26rem;
+}
+@media screen and (max-width: 1000px) {
+	.slide-product {
+		width: 100%;
+		min-width: 20rem;
+	}
+}
+@media screen and (max-width: 440px) {
+	.slide-product {
+	}
+}
+@media screen and (max-width: 400px) {
+	.slide-product {
+		width: 100% !important;
+	}
+}

@@ -15,15 +15,10 @@ function Product() {
 
 	return (
 		<>
-			<div className="toolbar" />
 			<div className="product-introduction">
 				<ProductSlider />
-				<div>
-					<ProductInformation />
-				</div>
-				<div>
-					<BuyProduct />
-				</div>
+				<ProductInformation />
+				<BuyProduct />
 			</div>
 			<RelatedProducts />
 			<CompleteProductInfo />

@@ -9,6 +9,7 @@ import image1 from "../../assets/image/product/1.png";
 import image2 from "../../assets/image/product/2.png";
 import image3 from "../../assets/image/product/3.png";
 import image4 from "../../assets/image/product/4.png";
+import "./ProductSlider.css";
 
 function ProductSlider() {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -20,18 +21,14 @@ function ProductSlider() {
 	];
 
 	return (
-		<div
-			style={{
-				padding: "50px 0 0 0",
-				maxWidth: "35%",
-			}}
-		>
+		<div className="slide-product">
 			<Swiper
 				thumbs={{ swiper: thumbsSwiper }}
 				modules={[Navigation, FreeMode, Thumbs]}
 				slidesPerView={1}
 				spaceBetween={40}
-				style={{ height: "70%" }}
+				navigation={true}
+				style={{ width: "100%" }}
 			>
 				{images.map(({ img, id, alt }) => {
 					return (
@@ -55,17 +52,32 @@ function ProductSlider() {
 				})}
 			</Swiper>
 			<Swiper
+				style={{ width: "100%" }}
 				onSwiper={setThumbsSwiper}
 				slidesPerView={4}
 				spaceBetween={10}
 				freeMode={true}
 				watchSlidesProgress={true}
 				modules={[FreeMode, Thumbs]}
+				breakpoints={{
+					// when window width is >= 640px
+					360: {
+						slidesPerView: 3,
+					},
+					// when window width is >= 768px
+					768: {
+						slidesPerView: 4,
+					},
+				}}
 			>
 				{images.map(({ img, id, alt }) => {
 					return (
 						<SwiperSlide key={id}>
-							<img src={img} style={{ maxWidth: "100px" }} alt={alt} />
+							<img
+								src={img}
+								style={{ maxWidth: "100px", minWidth: "70px" }}
+								alt={alt}
+							/>
 						</SwiperSlide>
 					);
 				})}

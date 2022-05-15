@@ -1,9 +1,11 @@
 .buy-product {
-	width: 24rem;
+	min-width: 21rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	width: 25%;
+	flex-wrap: wrap;
 }
 .product-content {
 	width: 80%;
@@ -18,6 +20,7 @@
 	/* background: rgb(255, 100, 80); */
 	color: rgb(60, 60, 60);
 	padding: 5px;
+	background-color: white;
 }
 .product-content .attr-product {
 	list-style: none;

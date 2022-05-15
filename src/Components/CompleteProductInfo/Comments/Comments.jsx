@@ -61,7 +61,7 @@ function Comments() {
 		</div>
 	);
 	return (
-		<div className="cpi-comments">
+		<div className="cpi-comments" id="comment">
 			<h3 className="title">دیدگاه</h3>
 			<div className="comment-content">
 				<div className="score">

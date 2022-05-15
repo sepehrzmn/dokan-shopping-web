@@ -204,7 +204,7 @@
 	bottom: -150px;
 }
 .slider__input > input {
-	margin-left: 20px;
+	margin-left: 10px !important;
 	direction: ltr;
 }
 .FS-available .toggle {

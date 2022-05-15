@@ -1,13 +1,20 @@
 .product-introduction {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	gap: 5rem;
 	border-radius: 10px;
-	width: 99%;
-	margin: 0 auto;
+	width: 95%;
+	margin: 20px auto 100px auto;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0;
 }
-.product-introduction > div:nth-of-type(1) {
-	width: 40%;
-}
+
 .product-introduction > div:nth-of-type(2) {
 	flex-grow: 1;
+}
+@media screen and (max-width: 460px) {
+	.product-introduction {
+		width: 100%;
+	}
 }

@@ -4,6 +4,7 @@
 	height: max-content;
 	flex-direction: column;
 	padding: 10px;
+	min-width: 20rem;
 }
 .product-information .title {
 	font-size: 1.2rem !important;
@@ -76,4 +77,9 @@
 }
 .location {
 	border: 2px dashed #ff5d51;
+}
+@media screen and (max-width: 500px) {
+	.product-information {
+		padding: 0 5px;
+	}
 }

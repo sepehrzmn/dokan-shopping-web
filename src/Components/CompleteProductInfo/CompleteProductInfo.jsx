@@ -1,6 +1,6 @@
 import React from "react";
 import "./CompleteProductInfo.css";
-import { Navbar, Intro, Specifications, Comments, Questions, Card } from "./";
+import { Navbar, Intro, Specifications, Comments, Questions } from "./";
 import BuyProduct from "../BuyProduct/BuyProduct";
 
 function CompleteProductInfo() {
