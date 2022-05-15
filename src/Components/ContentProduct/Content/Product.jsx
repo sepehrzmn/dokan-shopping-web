@@ -2,6 +2,7 @@ import React from "react";
 import productImg from "../../../assets/image/violin.png";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Product() {
 	return (
@@ -30,7 +31,12 @@ function Product() {
 								scale: 1.4,
 							}}
 						>
-							<Icon icon="el:shopping-cart" fontSize={20} />{" "}
+							<Link
+								to="/shopping/products/1"
+								style={{ width: "100%", height: "100%" }}
+							>
+								<Icon icon="el:shopping-cart" fontSize={20} />{" "}
+							</Link>
 						</motion.div>
 					</div>
 				</div>

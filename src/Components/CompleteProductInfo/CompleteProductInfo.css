@@ -1,0 +1,338 @@
+.complete-product-info {
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0 0 10px tan;
+	margin-top: 40px;
+	border-radius: 5px;
+	color: rgb(48, 48, 48);
+}
+.complete-product-info .info {
+	width: 65%;
+}
+.complete-product-info .info > div {
+	border-bottom: 5px solid rgb(190, 190, 190);
+	margin-bottom: 40px;
+	padding: 10px 0;
+}
+.complete-product-info .info > :last-child {
+	border: none;
+	padding-bottom: 50px;
+}
+.cp-info-navbar {
+	position: sticky !important;
+	z-index: 2;
+	left: 0;
+	width: 97%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	box-shadow: 0 4px 2px -4px gray;
+	transition: 0.5s ease;
+	color: rgb(42, 42, 42);
+}
+.cpi-content {
+	width: 90%;
+}
+.cpi-content > ul {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 3rem;
+	list-style: none;
+}
+.complete-product-info > div {
+	padding: 0 20px;
+	font-size: 1rem;
+}
+.complete-product-info .intro {
+	text-align: justify;
+	line-height: 30px;
+}
+.complete-product-info .title {
+	padding: 0 20px;
+	text-align: justify;
+	font-weight: 100;
+	font-size: 1.2rem;
+	position: relative;
+	padding: 0;
+}
+
+.complete-product-info .title::after {
+	content: "";
+	width: 100px;
+	height: 2px;
+	position: absolute;
+	background: linear-gradient(
+		to left,
+		rgb(244, 46, 46),
+		rgb(255, 255, 255) 90%
+	);
+	bottom: -5px;
+	margin: 0;
+	right: 0;
+}
+.complete-product-info .intro > p {
+	margin-bottom: 0;
+}
+.complete-product-info .btn {
+	padding: 0;
+	margin: 0;
+	color: rgb(36, 152, 234);
+	cursor: pointer;
+	font-size: 14px;
+	display: flex;
+	width: 60px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.cpi-comments .comment-content {
+	display: flex;
+	gap: 5rem;
+}
+
+.spec-list {
+	display: flex;
+	gap: 1.5rem;
+	align-items: flex-start;
+	overflow: hidden;
+}
+.spec-list > :nth-child(1) {
+	align-self: center;
+}
+.spec-list > ul {
+	list-style: none;
+}
+.spec-list > ul > li {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	width: 500px;
+	height: 50px;
+	margin: 10px 0;
+}
+.spec-list > ul > li > span {
+	height: 50px;
+}
+.spec-list > ul > li > :nth-child(1) {
+	width: 200px;
+	color: rgb(95, 95, 95);
+	display: flex;
+	align-items: center;
+}
+.spec-list > ul > li > :nth-child(2) {
+	box-shadow: 0 2px 5px -2px rgb(101, 101, 101);
+	border-radius: 10px;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	color: rgb(84, 84, 84);
+	justify-content: center;
+}
+.score-number {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 200px;
+}
+.score-number > :nth-child(1) {
+	font-size: 1.2rem;
+	margin: 5px 0 0 10px;
+}
+.score-number > :nth-child(2) {
+	font-size: 1rem;
+}
+.score-content-top > :nth-child(2) {
+	text-align: center;
+	width: max-content;
+}
+.score-content-top > :nth-child(2) > span {
+	font-size: 2rem;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-align: center;
+}
+.percent-rating {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+.percent-rating > div {
+	display: block;
+	position: relative;
+}
+.percent-rating > div > h4 {
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 0.9rem;
+	color: rgb(82, 82, 82);
+}
+.percent-rating .base-bar {
+	width: 200px;
+	display: block;
+	height: 10px;
+	border-radius: 10px;
+	background: rgb(225, 225, 225);
+	position: relative;
+}
+.percent-rating .percent-bar {
+	content: "";
+	position: absolute;
+	height: 2px;
+	display: block;
+	height: 10px;
+	border-radius: 100px !important;
+	background: rgb(110, 163, 243);
+}
+.percent-rating > div > span {
+	position: absolute;
+	left: -25px;
+	top: 27px;
+	font-size: 0.8rem;
+	color: rgb(84, 84, 84);
+}
+.cpi-comment {
+	width: 100%;
+}
+.cpc-comment {
+	display: flex;
+	flex-direction: column;
+	font-size: 1rem;
+	width: 100%;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 1px rgb(199, 199, 199);
+	padding: 10px;
+}
+
+.title-cpc-comment {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+}
+.title-cpc-comment > h3 {
+	margin: 0;
+	font-weight: 100;
+	font-size: 1.1rem;
+}
+.title-cpc-comment > span {
+	height: 20px;
+	width: 30px;
+	font-weight: bold;
+	margin-top: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.7rem;
+	padding-top: 1.5px;
+	color: white;
+	border-radius: 5px;
+}
+
+.comment-time {
+	font-size: 0.8rem;
+	color: rgb(149, 149, 149);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	padding: 0 15px 10px 0;
+	margin-bottom: 10px;
+
+	border-bottom: 1px solid gainsboro;
+	margin-top: 10px;
+}
+.comment-time > span:nth-of-type(1),
+.comment-time > span:nth-of-type(2) {
+	position: relative;
+}
+.comment-time > span:nth-of-type(1)::after,
+.comment-time > span:nth-of-type(2)::after {
+	content: "";
+	display: block;
+	height: 4px;
+	width: 4px;
+	border-radius: 100%;
+	position: absolute;
+	left: -10px;
+	top: 9px;
+
+	background: rgb(149, 149, 149);
+}
+.comment-time > span:nth-of-type(3) {
+	background: rgb(243, 243, 243);
+	padding: 2px 8px;
+	border-radius: 0.8rem;
+}
+.cpc-comment > p {
+	min-height: 50px;
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.suggestion {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30px;
+	gap: 0.5rem;
+}
+
+.cpc-comment .color {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgb(88, 88, 88);
+	font-size: 14px;
+}
+.cpc-comment .color > div {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+.cpi-question {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+.cpi-question-form {
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+.cpi-question-form > textarea {
+	color: rgb(96, 96, 96);
+	padding: 10px;
+	width: 80%;
+	box-shadow: 0 0 1px rgb(141, 141, 141);
+	border-radius: 10px;
+	resize: none;
+	margin: 0 auto;
+	height: 85px;
+}
+.cpi-question-form > button {
+	align-self: flex-end;
+	background: rgb(254, 78, 78);
+	padding: 8px 20px;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	margin-left: 50px;
+}
+.card {
+	position: sticky;
+	top: 50%;
+	align-self: flex-start;
+	margin: 50px 0;
+}

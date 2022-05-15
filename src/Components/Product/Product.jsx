@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 function Product() {
 	return (
-		<Link to="/product">
+		<Link to="/shopping/products/1">
 			<motion.div
 				initial={{
 					fontSize: "16px",

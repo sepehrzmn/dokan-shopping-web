@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Footer, Navbar } from "../";
 import { Home, Category, Shopping, Product } from "../pages/index";
@@ -13,7 +13,7 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/shopping" element={<Shopping />} />
 				<Route path="/shopping/:category" element={<Category />} />
-				<Route path="/shopping/:id" element={<Product />} />
+				<Route path="/shopping/products/:id" element={<Product />} />
 			</Routes>
 			<Footer />
 		</>

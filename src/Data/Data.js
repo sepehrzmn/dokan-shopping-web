@@ -19,3 +19,18 @@ const DEFAULT_ITEMS = [
 export function getDataCategory(slug) {
 	return DEFAULT_ITEMS.filter((item) => item.slug === slug);
 }
+export function truncate(str, len) {
+	return str.length > len ? str.substr(0, len - 1) + " ..." : str;
+}
+export function getNumberNextPoint(number) {
+	const strNumber = number.toString();
+	const rgx = /^[0-9]*.[0-9]*$/;
+	const check = strNumber.match(rgx);
+	if (check) {
+		const arrayNumber = strNumber.split(".");
+		if ((arrayNumber.length = 2)) {
+			return arrayNumber[1];
+		}
+		return number;
+	}
+}

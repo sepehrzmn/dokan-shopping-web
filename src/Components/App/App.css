@@ -23,7 +23,8 @@ button {
 	all: unset;
 }
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+textarea {
 	font-family: "Yekan";
 	all: unset;
 }

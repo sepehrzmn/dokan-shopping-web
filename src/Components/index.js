@@ -8,3 +8,8 @@ export { default as Product } from "./Product/Product";
 export { default as Proposal } from "./Proposal/Proposal";
 export { default as SliderShopping } from "./SliderShopping/SliderShopping";
 export { default as Special } from "./Special/Special";
+export { default as ProductSlider } from "./ProductSlider/ProductSlider";
+export { default as ProductInformation } from "./ProductInformation/Information";
+export { default as BuyProduct } from "./BuyProduct/BuyProduct";
+export { default as RelatedProducts } from "./RelatedProducts/RelatedProducts";
+export { default as CompleteProductInfo } from "./CompleteProductInfo/CompleteProductInfo";

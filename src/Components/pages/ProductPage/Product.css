@@ -1,0 +1,13 @@
+.product-introduction {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	width: 99%;
+	margin: 0 auto;
+}
+.product-introduction > div:nth-of-type(1) {
+	width: 40%;
+}
+.product-introduction > div:nth-of-type(2) {
+	flex-grow: 1;
+}
