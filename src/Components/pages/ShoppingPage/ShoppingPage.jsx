@@ -12,7 +12,6 @@ function ShoppingPage() {
 	}, []);
 	return (
 		<>
-			<div className="toolbar" />
 			<div>
 				<SliderShopping />
 				<Special />

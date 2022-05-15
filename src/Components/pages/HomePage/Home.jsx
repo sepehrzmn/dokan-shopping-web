@@ -14,7 +14,6 @@ function Home() {
 	}, []);
 	return (
 		<>
-			<div className="toolbar" />
 			<Introduction />
 			<Invitation />
 			<Category />

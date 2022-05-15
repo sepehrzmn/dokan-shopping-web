@@ -13,10 +13,10 @@ import { Link } from "react-router-dom";
 function CategoryShopping() {
 	const anime = {
 		normal: {
-			scale: window.screen.width > 1250 ? 1 : 0.8,
+			scale: window.screen.width > 1250 ? 0.9 : 0.8,
 		},
 		hover: {
-			scale: window.screen.width > 1250 ? 1.15 : 1,
+			scale: window.screen.width > 1250 ? 1.09 : 1,
 		},
 	};
 

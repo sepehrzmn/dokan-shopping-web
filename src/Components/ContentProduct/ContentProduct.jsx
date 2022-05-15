@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Content from "./Content/Content";
 import "./ContentProduct.css";
 import Filter from "./Filter/Filter";
@@ -8,25 +8,37 @@ import { motion } from "framer-motion";
 
 function ContentProduct({ category }) {
 	const [menuMobile, setMenuMobile] = useState(false);
+	const content = useRef();
 	const variants = {
-		open: { opacity: 1, x: 0 },
-		closed: { opacity: 0, x: "-100%" },
+		open: { display: "block", opacity: 1, x: 0 },
+		closed: { display: "none", opacity: 0, x: "-100%" },
 	};
+	useEffect(() => {
+		if (menuMobile) {
+			content.current.scrollTo({ top: 0, behavior: "smooth" });
+		}
+	}, [menuMobile]);
+
+	function updateMenuMobile() {
+		setMenuMobile(!menuMobile);
+	}
 	return (
-		<div className="ContentProduct">
+		<div className="ContentProduct" smooth={true} ref={content}>
 			<motion.div
 				className="bg-dark"
 				animate={menuMobile ? "open" : "closed"}
 				variants={variants}
+				onClick={updateMenuMobile}
 			/>
 
 			<motion.div
 				className="menu-content-product-icon"
-				onClick={() => setMenuMobile(!menuMobile)}
+				onClick={updateMenuMobile}
 			>
 				<Icon icon="fluent:filter-dismiss-24-filled" fontSize={25} rotate={2} />
 			</motion.div>
 			<motion.div
+				initial="closed"
 				className="menu-mobile"
 				animate={menuMobile ? "open" : "closed"}
 				variants={variants}

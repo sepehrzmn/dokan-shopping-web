@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Dokan from "../Dokan/Dokan";
-
+import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
+const login = false;
 let newKnownScrollPosition = 0;
 let lastKnownScrollPosition = 0;
 
@@ -44,13 +46,60 @@ function Navbar() {
 				<Dokan />
 				<ul className="menu">
 					<li className="active">
-						<Link to="/">خانه</Link>
+						<NavLink to="/">خانه</NavLink>
 					</li>
 					<li>
-						<Link to="/shopping">فروشگاه</Link>
+						<NavLink to="/shopping">فروشگاه</NavLink>
 					</li>
 				</ul>
-				<div className="user">user</div>
+
+				{login ? (
+					<>
+						<NavLink to={"/dashboard"}>
+							<motion.div
+								className="user"
+								initial={{
+									width: "40px",
+								}}
+								whileHover={{
+									width: "max-content",
+								}}
+							>
+								<div className="user-avatar">
+									<img
+										src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=80"
+										alt="user"
+									/>
+								</div>
+								<span>سپهر زمانی</span>
+							</motion.div>
+						</NavLink>
+					</>
+				) : (
+					<>
+						<NavLink to={"/sing-up"}>
+							<motion.div
+								className="user"
+								initial={{
+									width: "40px",
+								}}
+								whileHover={{
+									width: "max-content",
+								}}
+							>
+								<div className="user-avatar">
+									<Icon
+										icon="carbon:user-avatar-filled"
+										fontSize={40}
+										color="#bbbbbb"
+									/>
+								</div>
+								<span>عضویت/ ورود</span>
+							</motion.div>
+						</NavLink>
+					</>
+				)}
+
 				<div className="menuMobile" onClick={() => setMenuMobile(!menuMobile)}>
 					<span
 						style={

@@ -8,7 +8,8 @@
 }
 
 .SCC__content {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 287px));
 	flex-wrap: wrap;
 	gap: 0.8rem 0.8rem;
 	padding: 10px;

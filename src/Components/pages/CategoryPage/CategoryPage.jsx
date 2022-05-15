@@ -15,7 +15,6 @@ function CategoryPage() {
 	return (
 		<>
 			<div>
-				<div className="toolbar" style={{ marginBottom: "20px" }} />
 				<CategoryShopping />
 				<Header title={item[0].name} icon={item[0].icons} id={item[0].id} />
 				<ContentProduct category={false} />
