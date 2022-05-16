@@ -31,7 +31,7 @@ function CategoryShopping() {
 	];
 
 	return (
-		<div className="category-shopping">
+		<div className="category-shopping" id="category">
 			<div className="SCS-content">
 				{categories.map((category) => {
 					return (

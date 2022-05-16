@@ -13,3 +13,5 @@ export { default as ProductInformation } from "./ProductInformation/Information"
 export { default as BuyProduct } from "./BuyProduct/BuyProduct";
 export { default as RelatedProducts } from "./RelatedProducts/RelatedProducts";
 export { default as CompleteProductInfo } from "./CompleteProductInfo/CompleteProductInfo";
+export { default as FooterShopping } from "./FooterShopping/FooterShopping";
+export { default as Login } from "./Login/Login";

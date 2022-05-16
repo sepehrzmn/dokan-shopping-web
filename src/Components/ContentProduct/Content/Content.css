@@ -3,13 +3,12 @@
 	margin-top: 10px;
 	margin-left: 10px;
 	border-radius: 10px;
-	box-shadow: 0 0 1px rgba(18, 18, 18, 0.1);
 	width: calc(100% - 280px);
 }
 
 .SCC__content {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 287px));
+	grid-template-columns: repeat(auto-fit, 280px);
 	flex-wrap: wrap;
 	gap: 0.8rem 0.8rem;
 	padding: 10px;
@@ -20,7 +19,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 0 1px rgba(124, 124, 124, 0.969);
+	box-shadow: 0 0 2px rgba(124, 124, 124, 0.969);
 	border-radius: 10px;
 	flex-direction: column;
 	position: relative;
@@ -118,7 +117,7 @@
 }
 @media screen and (max-width: 760px) {
 	.SCC__content {
-		justify-content: initial;
+		/* justify-content: center; */
 	}
 	.content {
 		width: 80%;

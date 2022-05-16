@@ -23,7 +23,7 @@ function ContentProduct({ category }) {
 		setMenuMobile(!menuMobile);
 	}
 	return (
-		<div className="ContentProduct" smooth={true} ref={content}>
+		<div className="ContentProduct" smooth={true} ref={content} id="products">
 			<motion.div
 				className="bg-dark"
 				animate={menuMobile ? "open" : "closed"}

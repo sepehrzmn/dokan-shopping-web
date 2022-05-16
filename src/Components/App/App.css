@@ -24,7 +24,13 @@ button {
 }
 input[type="text"],
 input[type="number"],
+input[type="email"],
 textarea {
 	font-family: "Yekan";
-	all: unset;
+	/* all: unset; */
+	outline: none;
+	border: none;
+}
+input:focus {
+	background: rgb(237, 237, 237);
 }

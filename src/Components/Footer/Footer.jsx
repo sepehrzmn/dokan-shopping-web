@@ -7,7 +7,7 @@ function Footer() {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}
 	return (
-		<footer>
+		<footer className="footer-home">
 			<div onClick={goUp}>
 				<Icon icon="bi:arrow-up-circle-fill" fontSize={40} />
 			</div>

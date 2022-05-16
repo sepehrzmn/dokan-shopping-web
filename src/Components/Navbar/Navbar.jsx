@@ -45,11 +45,29 @@ function Navbar() {
 			<div className="nav-content">
 				<Dokan />
 				<ul className="menu">
-					<li className="active">
-						<NavLink to="/">خانه</NavLink>
+					<li>
+						<NavLink
+							to="/"
+							style={({ isActive }) => {
+								return {
+									borderBottom: isActive ? "2px solid #ffd500" : "",
+								};
+							}}
+						>
+							خانه
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/shopping">فروشگاه</NavLink>
+						<NavLink
+							to="/shopping"
+							style={({ isActive }) => {
+								return {
+									borderBottom: isActive ? "2px solid #ffd500" : "",
+								};
+							}}
+						>
+							فروشگاه
+						</NavLink>
 					</li>
 				</ul>
 
