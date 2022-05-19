@@ -34,3 +34,34 @@ export function getNumberNextPoint(number) {
 		return number;
 	}
 }
+export function ConvertNumberToPersian(number) {
+	const persian = {
+		0: "۰",
+		1: "۱",
+		2: "۲",
+		3: "۳",
+		4: "۴",
+		5: "۵",
+		6: "۶",
+		7: "۷",
+		8: "۸",
+		9: "۹",
+	};
+	let strPersian = "";
+	const strNum = number.toString().split("");
+	if (!Object.keys(persian).includes(strNum[0])) {
+		return number;
+	}
+	for (let i = 0; i < strNum.length; i++) {
+		if (strNum[i] === ",") continue;
+		strNum[i] = persian[strNum[i]];
+	}
+	for (let i = 0; i < strNum.length; i++) {
+		strPersian += strNum[i];
+	}
+	strPersian.repeat("");
+
+	// console.log(number, strPersian);
+
+	return strPersian ? strPersian : number;
+}

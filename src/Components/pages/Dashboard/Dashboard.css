@@ -1,0 +1,39 @@
+.dashboard-container {
+	height: max-content;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(200deg, rgb(48, 168, 254), rgb(79, 48, 254));
+}
+.btn-store {
+	width: 60px;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	box-shadow: 0 0 5px white;
+	cursor: pointer;
+}
+.btn-back {
+	width: 60px;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	box-shadow: 0 0 5px white;
+	cursor: pointer;
+}

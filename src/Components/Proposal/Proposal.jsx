@@ -1,9 +1,18 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Items from "./Items/Items";
 import "./Proposal.css";
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { useEffect } from "react";
+import Product from "../Product/Product";
+import { useShopping } from "../../contexts/Shopping";
 function Proposal() {
+	const [data, setData] = useState(null);
+	const items = useShopping();
+	useEffect(() => {
+		setData(items);
+	}, items);
+
 	return (
 		<div className="proposal">
 			<Swiper
@@ -44,12 +53,17 @@ function Proposal() {
 						/>
 					</div>
 				</SwiperSlide>
-				{Array(16)
-					.fill("")
-					.map((item, index) => {
+				{data &&
+					data.proposal.map((item, index) => {
 						return (
 							<SwiperSlide key={index + 1}>
-								<Items />
+								<Product
+									caption={item.caption}
+									count={item.count}
+									rating={item.rating}
+									id={item.id}
+									price={item.price}
+								/>
 							</SwiperSlide>
 						);
 					})}

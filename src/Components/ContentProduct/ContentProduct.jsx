@@ -5,14 +5,23 @@ import Filter from "./Filter/Filter";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { useShopping } from "../../contexts/Shopping";
+import { useFilter } from "../../contexts/filter";
 
 function ContentProduct({ category }) {
 	const [menuMobile, setMenuMobile] = useState(false);
+	const [data, setData] = useState();
+	const { setAllProduct } = useFilter();
+	const items = useShopping();
 	const content = useRef();
 	const variants = {
 		open: { display: "block", opacity: 1, x: 0 },
 		closed: { display: "none", opacity: 0, x: "-100%" },
 	};
+	useEffect(() => {
+		setData(items);
+		items && setAllProduct(items.products);
+	}, [items]);
 	useEffect(() => {
 		if (menuMobile) {
 			content.current.scrollTo({ top: 0, behavior: "smooth" });
@@ -30,7 +39,6 @@ function ContentProduct({ category }) {
 				variants={variants}
 				onClick={updateMenuMobile}
 			/>
-
 			<motion.div
 				className="menu-content-product-icon"
 				onClick={updateMenuMobile}
@@ -47,9 +55,9 @@ function ContentProduct({ category }) {
 				<Filter />
 			</motion.div>
 			<div className="d-none">
-				<Filter />
+				<Filter category />
 			</div>
-			<Content category={category} />
+			{data && <Content products={data.products} />}
 		</div>
 	);
 }

@@ -1,17 +1,33 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import { useShopping } from "../../../contexts/Shopping";
+import { useEffect } from "react";
+import { useFilter } from "../../../contexts/filter";
 function Category() {
 	const [boxCategory, setBoxCategory] = useState(false);
-	const listItems = [
-		"ساز افکتی",
-		"ساز بادی",
-		"ساز کوبه ای",
-		"ساز دهنی",
-		"ساز کلید دار",
-		"ساز زهی",
-		"ساز الکترونیک",
-	];
+	const [value, setValue] = useState([]);
+	const { setCategory } = useFilter();
+
+	const data = useShopping();
+
+	useEffect(() => {
+		data &&
+			setValue(() => {
+				return data.category.map((item) => {
+					return {
+						name: item.caption,
+						id: item.id,
+						checked: false,
+						slug: item.slug,
+					};
+				});
+			});
+	}, [data]);
+	useEffect(() => {
+		setCategory(value);
+	}, [value]);
+
 	return (
 		<motion.section
 			className="FS-category"
@@ -39,16 +55,24 @@ function Category() {
 				</motion.div>
 			</motion.h3>
 			<form className="category-form">
-				{listItems.map((item, index) => {
+				{value.map((item, index) => {
 					return (
-						<label key={index + 1} htmlFor={item}>
+						<label key={index + 1} htmlFor={item.slug}>
 							<input
 								className="checkbox"
 								type="checkbox"
-								name={item}
-								id={item}
+								name={item.slug}
+								id={item.id}
+								checked={item.checked}
+								onChange={() => {
+									return setValue((prevent) => {
+										const newValue = [...prevent];
+										newValue[index] = { ...item, checked: !item.checked };
+										return newValue;
+									});
+								}}
 							/>
-							{item}
+							{item.name}
 						</label>
 					);
 				})}

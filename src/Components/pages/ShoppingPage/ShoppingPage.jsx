@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FilterProvider } from "../../../contexts/filter";
 import {
 	Special,
 	SliderShopping,
@@ -17,7 +18,9 @@ function ShoppingPage() {
 				<Special />
 				<Proposal />
 				<CategoryShopping />
-				<NewProduction />
+				<FilterProvider>
+					<NewProduction />
+				</FilterProvider>
 			</div>
 		</>
 	);

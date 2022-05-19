@@ -7,7 +7,7 @@ import PriceRange from "./PriceRange";
 import Available from "./Available";
 import PropTypes from "prop-types";
 
-function Filter({ category }) {
+function Filter({ category, search }) {
 	return (
 		<aside className="filter">
 			<Search />
@@ -19,7 +19,7 @@ function Filter({ category }) {
 	);
 }
 
-Filter.protoTypes = {
+Filter.defaultProps = {
 	category: PropTypes.bool.isRequired,
 };
 export default Filter;

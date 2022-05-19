@@ -1,0 +1,641 @@
+{
+	"HomeItems": {
+		"category": [
+			{
+				"caption": "ساز افکتی",
+				"image": "/static/",
+				"slug": "effect",
+				"id": 1
+			},
+			{
+				"caption": "ساز بادی",
+				"image": "/static/",
+				"slug": "windy",
+				"id": 2
+			},
+			{
+				"caption": "ساز کوبه ای",
+				"image": "/static/",
+				"slug": "kobe",
+				"id": 3
+			},
+			{
+				"caption": "ساز دهنی",
+				"image": "/static/",
+				"slug": "harmonica",
+				"id": 4
+			},
+			{
+				"caption": "ساز صفحه کلید دار",
+				"image": "/static/",
+				"slug": "keyboardMaker",
+				"id": 5
+			},
+			{
+				"caption": "ساز زهی",
+				"image": "/static/",
+				"slug": "stringed",
+				"id": 6
+			},
+			{
+				"caption": "ساز الکترونیک",
+				"image": "/static/",
+				"slug": "electronic",
+				"id": 7
+			}
+		],
+		"newProducts": [
+			{
+				"caption": " ويولن سندنر مدل CV6-4/4",
+				"count": "2",
+				"rating": "4.2",
+				"price": "2,904,000",
+				"id": 1
+			},
+			{
+				"caption": "گیتار یاماهاُ مدل C70",
+				"count": "infinite",
+				"rating": "3.1",
+				"price": "1,360,000",
+				"id": 2
+			},
+			{
+				"caption": "پیانو آکوستیک یاماها مدل GB1K",
+				"count": "1",
+				"rating": "4.8",
+				"price": "475,000,000",
+				"id": 3
+			},
+
+			{
+				"caption": "گیتار کلاسیک مدل NE2",
+				"count": "2",
+				"rating": "4.2",
+				"price": "2,904,000",
+				"id": 4
+			},
+			{
+				"caption": "پیانو دیجیتال یاماها مدل YDP-144",
+				"count": "1",
+				"rating": "3.2",
+				"price": "990,000",
+				"id": 5
+			},
+			{
+				"caption": "پیانو دیجیتال مدل رولی 49K",
+				"count": "1",
+				"rating": "1",
+				"price": "۱,۹۹۰,۰۰۰",
+				"id": 6
+			},
+			{
+				"caption": "سه تار مکتب مدل 001",
+				"count": "infinite",
+				"rating": "3.6",
+				"price": "۵۹۰,۰۰۰",
+				"id": 7
+			},
+			{
+				"caption": "گیتار مدل C40",
+				"count": "infinite",
+				"rating": "3.8",
+				"price": "۹۹۰,۰۰۰",
+				"id": 8
+			},
+			{
+				"caption": "گیتار کلاسیک یاماها مدل C40",
+				"count": "infinite",
+				"rating": "4.1",
+				"price": "۴,۲۰۰,۰۰۰",
+				"id": 9
+			},
+			{
+				"caption": "گیتار کلاسیک دیاموند کد 08",
+				"count": "infinite",
+				"rating": "5",
+				"price": "۹۵۰,۰۰۰",
+				"id": 10
+			}
+		],
+		"comments": [
+			{
+				"userName": "سپهر",
+				"avatar": "",
+				"text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از  و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+				"id": 1
+			},
+			{
+				"userName": "کوروش",
+				"avatar": "",
+				"text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجاساسا مورد استفاده قرار گیرد.",
+				"id": 2
+			},
+			{
+				"userName": "داریوش",
+				"avatar": "",
+				"text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکهروزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای.",
+				"id": 3
+			}
+		]
+	},
+	"ShopingItems": {
+		"proposal": [
+			{
+				"caption": " ويولن سندنر مدل CV6-4/4",
+				"count": "2",
+				"rating": "4.2",
+				"price": "2,904,000",
+				"id": 1
+			},
+			{
+				"caption": "گیتار یاماهاُ مدل C70",
+				"count": "infinite",
+				"rating": "3.1",
+				"price": "1,360,000",
+				"id": 2
+			},
+			{
+				"caption": "پیانو آکوستیک یاماها مدل GB1K",
+				"count": "1",
+				"rating": "4.8",
+				"price": "475,000,000",
+				"id": 3
+			},
+
+			{
+				"caption": "گیتار کلاسیک مدل NE2",
+				"count": "2",
+				"rating": "4.2",
+				"price": "2,904,000",
+				"id": 4
+			},
+			{
+				"caption": "پیانو دیجیتال یاماها مدل YDP-144",
+				"count": "1",
+				"rating": "3.2",
+				"price": "990,000",
+				"id": 5
+			},
+			{
+				"caption": "پیانو دیجیتال مدل رولی 49K",
+				"count": "1",
+				"rating": "1",
+				"price": "۱,۹۹۰,۰۰۰",
+				"id": 6
+			},
+			{
+				"caption": "سه تار مکتب مدل 001",
+				"count": "infinite",
+				"rating": "3.6",
+				"price": "۵۹۰,۰۰۰",
+				"id": 7
+			},
+			{
+				"caption": "گیتار مدل C40",
+				"count": "infinite",
+				"rating": "3.8",
+				"price": "۹۹۰,۰۰۰",
+				"id": 8
+			},
+			{
+				"caption": "گیتار کلاسیک یاماها مدل C40",
+				"count": "infinite",
+				"rating": "4.1",
+				"price": "۴,۲۰۰,۰۰۰",
+				"id": 9
+			},
+			{
+				"caption": "گیتار کلاسیک دیاموند کد 08",
+				"count": "infinite",
+				"rating": "5",
+				"price": "۹۵۰,۰۰۰",
+				"id": 10
+			}
+		],
+		"category": [
+			{
+				"caption": "ساز افکتی",
+				"image": "../images/category/penny.png",
+				"slug": "effect",
+				"id": 1
+			},
+			{
+				"caption": "ساز بادی",
+				"image": "../images/category/bassoon.png",
+				"slug": "windy",
+				"id": 2
+			},
+			{
+				"caption": "ساز کوبه ای",
+				"image": "../images/category/xylophone.png",
+				"slug": "kobe",
+				"id": 3
+			},
+			{
+				"caption": "ساز دهنی",
+				"image": "../images/category/harmonica.png",
+				"slug": "harmonica",
+				"id": 4
+			},
+			{
+				"caption": "ساز صفحه کلید دار",
+				"image": "../images/category/piano.png",
+				"slug": "keyboardMaker",
+				"id": 5
+			},
+			{
+				"caption": "ساز زهی",
+				"image": "../images/category/guitar.png",
+				"slug": "stringed",
+				"id": 6
+			},
+			{
+				"caption": "ساز الکترونیک",
+				"image": "../images/category/theremin.png",
+				"slug": "electronic",
+				"id": 7
+			}
+		],
+		"products": [
+			{
+				"id": 1,
+				"caption": "شیکر تخم مرغی الیس مدل AM0012BN بسته 2 عددی",
+				"brand": {
+					"fa": "آلیس",
+					"en": "Alice"
+				},
+				"price": 169000,
+				"count": "1",
+				"rating": "3.5",
+				"category": "effect",
+				"product_id": 1
+			},
+			{
+				"id": 2,
+				"caption": "شیکر تخم مرغی الیس مدل AM0012AB بسته 2 عددی",
+				"brand": {
+					"fa": "آلیس",
+					"en": "Alice"
+				},
+				"price": 169000,
+				"count": "1",
+				"rating": "2.5",
+				"category": "effect",
+				"product_id": 2
+			},
+			{
+				"id": 3,
+				"caption": "شیکر تخم مرغی الیس مدل  AM0012MS بسته 2 عددی",
+				"brand": {
+					"fa": "آلیس",
+					"en": "Alice"
+				},
+				"price": 169000,
+				"count": "",
+				"rating": "4.5",
+				"category": "effect",
+				"product_id": 3
+			},
+			{
+				"id": 4,
+				"caption": "اکارینا استگ مدل OCA-PL BL",
+				"brand": {
+					"fa": "استگ",
+					"en": "Stagg"
+				},
+				"price": 27500,
+				"count": "",
+				"rating": "4.5",
+				"category": "effect",
+				"product_id": 4
+			},
+			{
+				"id": 5,
+				"caption": "سوت کازو پلاستیکی استگ مدل Kazoo-30",
+				"brand": {
+					"fa": "استگ",
+					"en": "Stagg"
+				},
+				"price": 89000,
+				"count": "",
+				"rating": "4.5",
+				"category": "effect",
+				"product_id": 5
+			},
+			{
+				"id": 6,
+				"caption": "سوت کازو فلزی استگ مدل Metal-30",
+				"brand": {
+					"fa": "استگ",
+					"en": "Stagg"
+				},
+				"price": 89000,
+				"count": "",
+				"rating": "3",
+				"category": "effect",
+				"product_id": 6
+			},
+			{
+				"id": 7,
+				"caption": "سازدهنی کروماتیک هوهنر مدل Larry Adler 48 C",
+				"brand": {
+					"fa": "هوهنر",
+					"en": "Hohner"
+				},
+				"price": 9900000,
+				"count": "1",
+				"rating": "3.7",
+				"category": "windy",
+				"product_id": 7
+			},
+			{
+				"id": 8,
+				"caption": "سازدهنی دیاتونیک هوهنر مدل بلوز هارپ M533016",
+				"brand": {
+					"fa": "هوهنر",
+					"en": "Hohner"
+				},
+				"price": 1350000,
+				"count": "3",
+				"rating": "4.4",
+				"category": "windy",
+				"product_id": 8
+			},
+			{
+				"id": 9,
+				"caption": "سازدهنی کروماتیک ایستاپ مدل کینگ دریم T12-48k",
+				"brand": {
+					"fa": "ایستاپ",
+					"en": "Easttop"
+				},
+				"price": 2120000,
+				"count": "infinite",
+				"rating": "4",
+				"category": "windy",
+				"product_id": 9
+			},
+
+			{
+				"id": 10,
+				"caption": "سازدهنی کروماتیک ایستاپ مدل Forerunner T1248NV",
+				"brand": {
+					"fa": "ایستاپ",
+					"en": "Easttop"
+				},
+				"price": 1120000,
+				"count": "3",
+				"rating": "4.4",
+				"category": "windy",
+				"product_id": 10
+			},
+			{
+				"id": 11,
+				"caption": "تنبک حلمی مدل 24",
+				"brand": {
+					"fa": "حلمی",
+					"en": "helmi"
+				},
+				"price": 1800000,
+				"count": "2",
+				"rating": "4.4",
+				"category": "kobe",
+				"product_id": 12
+			},
+			{
+				"id": 12,
+				"caption": "تنبک حلمی مدل S20 ULTRA",
+				"brand": {
+					"fa": "حلمی",
+					"en": "helmi"
+				},
+				"price": 2699000,
+				"count": "1",
+				"rating": "4.4",
+				"category": "kobe",
+				"product_id": 12
+			},
+			{
+				"id": 13,
+				"caption": "دف سما مدل رمو",
+				"brand": {
+					"fa": "سما",
+					"en": "Sama"
+				},
+				"price": 589000,
+				"count": "1",
+				"rating": "4.8",
+				"category": "kobe",
+				"product_id": 13
+			},
+			{
+				"id": 14,
+				"caption": "دف سما مدل رمو",
+				"brand": {
+					"fa": "سما",
+					"en": "Sama"
+				},
+				"price": 590000,
+				"count": "infinite",
+				"rating": "4.3",
+				"category": "kobe",
+				"product_id": 14
+			},
+			{
+				"id": 15,
+				"caption": "گیتار کلاسیک یاماها مدل C70",
+				"brand": {
+					"fa": "یاماها",
+					"en": "yamaha"
+				},
+				"price": 520000,
+				"count": "infinite",
+				"rating": "4",
+				"category": "stringed",
+				"product_id": 15
+			},
+			{
+				"id": 16,
+				"caption": "گیتار کلاسیک یاماها مدل C40",
+				"brand": {
+					"fa": "یاماها",
+					"en": "yamaha"
+				},
+				"price": 520000,
+				"count": "infinite",
+				"rating": "4",
+				"category": "stringed",
+				"product_id": 16
+			},
+			{
+				"id": 17,
+				"caption": "گیتار الکتریک فندر مدل 0144502506 Player Stratocaster Black",
+				"brand": {
+					"fa": "فندر",
+					"en": "fender"
+				},
+				"price": 28690000,
+				"count": "1",
+				"rating": "2",
+				"category": "stringed",
+				"product_id": 17
+			},
+			{
+				"id": 18,
+				"caption": "گیتار باس فندر مدل Squier Affinity V Jazz Bass Black 0371575506",
+				"brand": {
+					"fa": "فندر",
+					"en": "fender"
+				},
+				"price": 17000000,
+				"count": "1",
+				"rating": "2",
+				"category": "stringed",
+				"product_id": 18
+			},
+			{
+				"id": 19,
+				"caption": " پیانو آکوستیک یاماها مدل GB1K",
+				"brand": {
+					"fa": "یاماها",
+					"en": "yamaha"
+				},
+				"price": 475000000,
+				"count": "1",
+				"rating": "4.8",
+				"category": "keyboardMaker",
+				"product_id": 19
+			},
+			{
+				"id": 20,
+				"caption": "پیانو دیجیتال یاماها مدل YDP-144",
+				"brand": {
+					"fa": "یاماها",
+					"en": "yamaha"
+				},
+				"price": 42195000,
+				"count": "1",
+				"rating": "4.2",
+				"category": "keyboardMaker",
+				"product_id": 20
+			},
+			{
+				"id": 21,
+				"caption": "دی جی کنترلر پایونیر مدل ddj400",
+				"brand": {
+					"fa": "پایونیر",
+					"en": "Pioneer"
+				},
+				"price": 13000000,
+				"count": "infinite",
+				"rating": "4.2",
+				"category": "electronic",
+				"product_id": 21
+			},
+			{
+				"id": 22,
+				"caption": "دی جی کنترلر نیتیو اینسترومنت مدل Maschine MK3 Black",
+				"brand": {
+					"fa": "نیتیو اینسترومنت",
+					"en": "native instruments"
+				},
+				"price": 19900000,
+				"count": "1",
+				"rating": "4.2",
+				"category": "electronic",
+				"product_id": 22
+			}
+		],
+		"brand": [
+			{
+				"id": 1,
+				"caption": {
+					"fa": "آلیس",
+					"en": "Alice"
+				},
+				"slug": "alice",
+				"indicators": ["effect"]
+			},
+			{
+				"id": 2,
+				"caption": {
+					"fa": "استگ",
+					"en": "Stagg"
+				},
+				"slug": "stagg",
+				"indicators": ["effect"]
+			},
+			{
+				"id": 3,
+				"caption": {
+					"fa": "هوهنر",
+					"en": "Hohner"
+				},
+				"slug": "hohner",
+				"indicators": ["windy"]
+			},
+			{
+				"id": 4,
+				"caption": {
+					"fa": "ایستاپ",
+					"en": "Easttop"
+				},
+				"slug": "easttop",
+				"indicators": ["windy"]
+			},
+			{
+				"id": 5,
+				"caption": {
+					"fa": "حلمی",
+					"en": "helmi"
+				},
+				"slug": "helmi",
+				"indicators": ["kobe"]
+			},
+			{
+				"id": 6,
+				"caption": {
+					"fa": "سما",
+					"en": "Sama"
+				},
+				"slug": "sama",
+				"indicators": ["kobe"]
+			},
+			{
+				"id": 7,
+				"caption": {
+					"fa": "یاماها",
+					"en": "yamaha"
+				},
+				"slug": "yamaha",
+				"indicators": ["keyboardMaker", "stringed"]
+			},
+			{
+				"id": 8,
+				"caption": {
+					"fa": "فندر",
+					"en": "fender"
+				},
+				"slug": "fender",
+				"indicators": ["stringed"]
+			},
+			{
+				"id": 9,
+				"caption": {
+					"fa": "پایونیر",
+					"en": "Pioneer"
+				},
+				"slug": "pioneer",
+				"indicators": ["electronic"]
+			},
+			{
+				"id": 10,
+				"caption": {
+					"fa": "نیتیو اینسترومنت",
+					"en": "native instruments"
+				},
+				"slug": "nativeInstruments",
+				"indicators": ["electronic"]
+			}
+		]
+	}
+}

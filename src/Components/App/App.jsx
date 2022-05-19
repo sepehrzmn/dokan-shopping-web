@@ -1,9 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Footer, Navbar, FooterShopping, Login } from "../";
-import { Home, Category, Shopping, Product } from "../pages/index";
+import { Home, Category, Shopping, Product, Dashboard } from "../pages/index";
 import "./App.css";
 import "../../assets/font/Yekan.css";
+import { HomeProvider } from "../../contexts/home";
+import { ShoppingProvider } from "../../contexts/Shopping";
 
 export default function App() {
 	return (
@@ -15,7 +17,9 @@ export default function App() {
 					element={
 						<>
 							<Navbar />
-							<Home />
+							<HomeProvider>
+								<Home />
+							</HomeProvider>
 							<Footer />
 						</>
 					}
@@ -25,7 +29,9 @@ export default function App() {
 					element={
 						<>
 							<Navbar />
-							<Shopping />
+							<ShoppingProvider>
+								<Shopping />
+							</ShoppingProvider>
 							<FooterShopping />
 						</>
 					}
@@ -63,6 +69,14 @@ export default function App() {
 					element={
 						<>
 							<Login type="in" />
+						</>
+					}
+				/>
+				<Route
+					path="/dashboard"
+					element={
+						<>
+							<Dashboard />
 						</>
 					}
 				/>

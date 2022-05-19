@@ -107,6 +107,9 @@
 	flex-grow: 1;
 	width: 80%;
 }
+.brand-form > label > div > span {
+	width: 50%;
+}
 
 .FS-available {
 	display: flex;
@@ -154,8 +157,8 @@
 	z-index: 3;
 }
 
-.thumb-zIndex-4 {
-	z-index: 4;
+.thumb-zIndex-6 {
+	z-index: 6;
 }
 .thumb::-webkit-slider-thumb {
 	background-color: #f1f5f7;
@@ -163,8 +166,8 @@
 	border-radius: 50%;
 	box-shadow: 0 0 1px 1px #ced4da;
 	cursor: pointer;
-	height: 18px;
-	width: 18px;
+	height: 14px;
+	width: 14px;
 	margin-top: 4px;
 	pointer-events: all;
 	position: relative;
@@ -232,4 +235,5 @@
 }
 .brand__name > :nth-child(2) {
 	color: #ced4da;
+	text-align: end;
 }

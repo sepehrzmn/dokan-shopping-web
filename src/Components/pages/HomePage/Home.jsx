@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import {
 	Category,
 	Comments,
@@ -9,15 +10,18 @@ import {
 import "./Home.css";
 
 function Home() {
+	const [items, setItems] = useState({});
+
 	useEffect(() => {
 		window.scrollTo({ top: "0", behavior: "smooth" });
 	}, []);
+
 	return (
 		<>
 			<Introduction />
 			<Invitation />
 			<Category />
-			<Possibilities />
+			{/* <Possibilities /> */}
 			<Comments />
 		</>
 	);

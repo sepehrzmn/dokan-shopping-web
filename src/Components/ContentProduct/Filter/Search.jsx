@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import { useFilter } from "../../../contexts/filter";
 function Search() {
 	const [boxSearch, setBoxSearch] = useState(false);
+	const { search, setSearch } = useFilter();
 	return (
 		<motion.section
 			className="FS-search"
@@ -35,6 +37,8 @@ function Search() {
 					name="search"
 					id="search"
 					placeholder="بگو تا بگردم"
+					value={search}
+					onChange={(e) => setSearch(e.currentTarget.value)}
 				/>
 			</form>
 		</motion.section>

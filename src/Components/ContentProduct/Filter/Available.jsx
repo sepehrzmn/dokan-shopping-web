@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useFilter } from "../../../contexts/filter";
+import { useEffect } from "react";
 
 function Available() {
 	const [Available, setAvailable] = useState(false);
+	const { checkedProduct } = useFilter();
+	useEffect(() => {
+		checkedProduct(Available);
+	}, [Available]);
 	return (
 		<motion.section className="FS-available" whileHover={{}}>
 			<div>فقط کالا های موجود</div>

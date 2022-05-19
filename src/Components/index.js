@@ -15,3 +15,4 @@ export { default as RelatedProducts } from "./RelatedProducts/RelatedProducts";
 export { default as CompleteProductInfo } from "./CompleteProductInfo/CompleteProductInfo";
 export { default as FooterShopping } from "./FooterShopping/FooterShopping";
 export { default as Login } from "./Login/Login";
+export { default as Tabs } from "./TabsComponent/Tabs";

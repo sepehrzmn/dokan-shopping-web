@@ -11,7 +11,6 @@ function SliderShopping() {
 				modules={[Navigation, Pagination, A11y]}
 				navigation
 				pagination={{ clickable: true }}
-				onReset={true}
 				loop={true}
 			>
 				{Array(5)

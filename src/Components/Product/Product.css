@@ -12,7 +12,7 @@
 	align-items: center;
 }
 .p-media > img {
-	width: 80%;
+	max-height: 210px;
 }
 .p-body {
 	padding: 10px;

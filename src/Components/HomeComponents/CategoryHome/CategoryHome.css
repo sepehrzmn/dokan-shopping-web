@@ -9,28 +9,6 @@
 	padding-right: 50px;
 }
 
-.popular-category {
-	display: flex;
-	gap: 5rem;
-	justify-content: space-evenly;
-	margin-bottom: 5rem;
-	padding: 0 10px;
-	flex-wrap: wrap;
-}
-.p-c-item {
-	width: 15rem;
-	height: 10rem;
-	background: #727272;
-	border-radius: 10px;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 0 8px #727272;
-	gap: 15px;
-	cursor: pointer;
-}
-
 .categoryHome .swiper {
 	width: 100%;
 	overflow: visible !important;
@@ -46,13 +24,5 @@
 @media screen and (max-width: 650px) {
 	.categoryHome {
 		padding: 0;
-	}
-	.popular-category {
-		gap: 15px;
-	}
-	.p-c-item {
-		width: 10rem !important;
-		height: 5rem;
-		padding: 10px;
 	}
 }

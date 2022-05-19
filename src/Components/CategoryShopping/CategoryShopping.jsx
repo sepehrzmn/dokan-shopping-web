@@ -9,8 +9,12 @@ import guitar from "../../assets/image/guitar-2.png";
 import theremin from "../../assets/image/theremin.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useShopping } from "../../contexts/Shopping";
 
 function CategoryShopping() {
+	const [data, setData] = useState(null);
 	const anime = {
 		normal: {
 			scale: window.screen.width > 1250 ? 0.9 : 0.8,
@@ -19,7 +23,11 @@ function CategoryShopping() {
 			scale: window.screen.width > 1250 ? 1.09 : 1,
 		},
 	};
+	const items = useShopping();
 
+	useEffect(() => {
+		setData(items);
+	}, [items]);
 	const categories = [
 		{ name: "ساز افکتی", slug: "effect", icons: pennFlute, id: 1 },
 		{ name: "ساز بادی", slug: "windy", icons: bassoon, id: 2 },
@@ -33,28 +41,28 @@ function CategoryShopping() {
 	return (
 		<div className="category-shopping" id="category">
 			<div className="SCS-content">
-				{categories.map((category) => {
-					return (
-						<motion.div
-							initial="normal"
-							whileHover="hover"
-							whileTap="hover"
-							variants={anime}
-							key={category.id}
-						>
-							<Link
-								to={`/shopping/${category.slug}`}
-								style={{ padding: "5px 0" }}
-								state={{ title: category.name, id: category.id }}
+				{data &&
+					data.category.map((category) => {
+						return (
+							<motion.div
+								initial="normal"
+								whileHover="hover"
+								whileTap="hover"
+								variants={anime}
+								key={category.id}
 							>
-								<div className={`SCSC-item-${category.id}`}>
-									<img src={category.icons} alt={category.slug} />
-								</div>
-								<span>{category.name}</span>
-							</Link>
-						</motion.div>
-					);
-				})}
+								<Link
+									to={`/shopping/${category.slug}`}
+									style={{ padding: "5px 0" }}
+								>
+									<div className={`SCSC-item-${category.id}`}>
+										<img src={category.image} alt={category.slug} />
+									</div>
+									<span>{category.caption}</span>
+								</Link>
+							</motion.div>
+						);
+					})}
 			</div>
 		</div>
 	);
