@@ -12,7 +12,7 @@ export function FilterProvider({ children }) {
 	const [selectBrand, setSelectBrand] = useState([]);
 	const [output, setOutput] = useState([]);
 	const [minItems, setMinItems] = useState(0);
-	const [MaxItems, setMaxValItems] = useState(0);
+	const [maxItems, setMaxValItems] = useState(0);
 
 	useEffect(() => {
 		checkedCategory();
