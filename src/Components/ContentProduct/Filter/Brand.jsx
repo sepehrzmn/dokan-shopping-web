@@ -35,12 +35,6 @@ function Brand() {
 					});
 					const toto = [].concat.apply([], newBrand);
 					return toto;
-
-					// return category.map((category) => {
-					// 	data.brand.filter((brand) => {
-					// 		return category.indicator === category.slug;
-					// 	});
-					// });
 				}
 				return data.brand.map((item) => {
 					return {

@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useFilter } from "../../../contexts/filter";
+import { useEffect } from "react";
 function Search() {
 	const [boxSearch, setBoxSearch] = useState(false);
-	const { search, setSearch } = useFilter();
+	const [search, setSearch] = useState("");
+	const { setSearchItem } = useFilter();
+	useEffect(() => {
+		setSearchItem(search);
+	}, [search]);
 	return (
 		<motion.section
 			className="FS-search"

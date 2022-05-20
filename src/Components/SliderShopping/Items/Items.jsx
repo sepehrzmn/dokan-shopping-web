@@ -10,7 +10,7 @@ function Items() {
 			<div className="SSI-brand">
 				<img src={brand} alt="yamaha" />
 				<h2> پیانو آکوستیک یاماها مدل GB1K</h2>
-				<Link to="/product" className="SSI-link">
+				<Link to="/shopping/products/1" className="SSI-link">
 					می خوامش
 				</Link>
 			</div>
