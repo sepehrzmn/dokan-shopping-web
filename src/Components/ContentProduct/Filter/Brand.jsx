@@ -82,6 +82,7 @@ function Brand() {
 								type="checkbox"
 								name={item.slug}
 								id={item.slug}
+								checked={item.checked}
 								value={item.checked}
 								onChange={() => {
 									const newBrand = [...brand];

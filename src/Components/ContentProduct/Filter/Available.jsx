@@ -5,9 +5,9 @@ import { useEffect } from "react";
 
 function Available() {
 	const [Available, setAvailable] = useState(false);
-	const { checkedProduct } = useFilter();
+	const { seExistence } = useFilter();
 	useEffect(() => {
-		checkedProduct(Available);
+		seExistence(Boolean(Available));
 	}, [Available]);
 	return (
 		<motion.section className="FS-available" whileHover={{}}>

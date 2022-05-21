@@ -7,7 +7,7 @@ import PriceRange from "./PriceRange";
 import Available from "./Available";
 import PropTypes from "prop-types";
 
-function Filter({ category, search }) {
+function Filter({ category }) {
 	return (
 		<aside className="filter">
 			<Search />
