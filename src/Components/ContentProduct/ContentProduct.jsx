@@ -8,20 +8,16 @@ import { motion } from "framer-motion";
 import { useShopping } from "../../contexts/Shopping";
 import { useFilter } from "../../contexts/filter";
 
-function ContentProduct({ category }) {
+function ContentProduct({ products, category }) {
 	const [menuMobile, setMenuMobile] = useState(false);
-	const [data, setData] = useState();
-	const { setAllProduct } = useFilter();
-	const items = useShopping();
 	const content = useRef();
+	const { setAllProduct } = useFilter();
+
 	const variants = {
 		open: { display: "block", opacity: 1, x: 0 },
 		closed: { display: "none", opacity: 0, x: "-100%" },
 	};
-	useEffect(() => {
-		setData(items);
-		items && setAllProduct(items.products);
-	}, [items]);
+
 	useEffect(() => {
 		if (menuMobile) {
 			content.current.scrollTo({ top: 0, behavior: "smooth" });
@@ -31,6 +27,9 @@ function ContentProduct({ category }) {
 	function updateMenuMobile() {
 		setMenuMobile(!menuMobile);
 	}
+	useEffect(() => {
+		setAllProduct(products);
+	}, []);
 	return (
 		<div className="ContentProduct" smooth={true} ref={content} id="products">
 			<motion.div
@@ -55,9 +54,9 @@ function ContentProduct({ category }) {
 				<Filter />
 			</motion.div>
 			<div className="d-none">
-				<Filter category />
+				<Filter category={category} />
 			</div>
-			{data && <Content products={data.products} />}
+			{products && <Content products={products} />}
 		</div>
 	);
 }

@@ -6,6 +6,7 @@ import "./App.css";
 import "../../assets/font/Yekan.css";
 import { HomeProvider } from "../../contexts/home";
 import { ShoppingProvider } from "../../contexts/Shopping";
+import { CategoryProvider } from "../../contexts/category";
 
 export default function App() {
 	return (
@@ -41,8 +42,12 @@ export default function App() {
 					element={
 						<>
 							<Navbar />
-							<Category />
-							<FooterShopping />
+							<ShoppingProvider>
+								<CategoryProvider>
+									<Category />
+								</CategoryProvider>
+								<FooterShopping />
+							</ShoppingProvider>
 						</>
 					}
 				/>
