@@ -7,8 +7,11 @@ import "../../assets/font/Yekan.css";
 import { HomeProvider } from "../../contexts/home";
 import { ShoppingProvider } from "../../contexts/Shopping";
 import { CategoryProvider } from "../../contexts/category";
+import { useLocalStorage } from "../../hooks/LocalStorage";
 
 export default function App() {
+	const [id, setId] = useLocalStorage("id");
+
 	return (
 		<>
 			<Routes>

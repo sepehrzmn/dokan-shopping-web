@@ -5,7 +5,6 @@ import Filter from "./Filter/Filter";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useShopping } from "../../contexts/Shopping";
 import { useFilter } from "../../contexts/filter";
 
 function ContentProduct({ products, category }) {

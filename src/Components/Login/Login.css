@@ -78,6 +78,7 @@
 	padding: 10px;
 	border-radius: 15px;
 	color: white;
+	cursor: pointer;
 }
 .login-body > a {
 	color: rgba(0, 13, 255, 0.564);
@@ -88,6 +89,24 @@
 	bottom: 10px;
 	left: 40%;
 	right: 40%;
+}
+.error-info {
+	position: absolute;
+	text-align: center;
+	bottom: 10px;
+}
+.error-info > div {
+	margin: 10px 0;
+	z-index: -1;
+	width: 400px;
+	height: 50px;
+	background-color: rgb(241, 82, 82);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	color: white;
 }
 @media screen and (max-width: 450px) {
 	.login-content-inner {
