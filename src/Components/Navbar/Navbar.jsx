@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Dokan from "../Dokan/Dokan";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-const login = false;
+import { useUser } from "../../contexts/user";
 let newKnownScrollPosition = 0;
 let lastKnownScrollPosition = 0;
 
@@ -12,7 +12,7 @@ function Navbar() {
 	const [hidden, setHidden] = useState(true);
 	const [shadow, setShadow] = useState(false);
 	const [menuMobile, setMenuMobile] = useState(false);
-
+	const { userInfo } = useUser();
 	function checkScroll() {
 		newKnownScrollPosition = window.scrollY;
 
@@ -71,7 +71,7 @@ function Navbar() {
 					</li>
 				</ul>
 
-				{login ? (
+				{userInfo.length ? (
 					<>
 						<NavLink to={"/dashboard"}>
 							<motion.div
@@ -89,7 +89,7 @@ function Navbar() {
 										alt="user"
 									/>
 								</div>
-								<span>سپهر زمانی</span>
+								<span>{userInfo[0].userName}</span>
 							</motion.div>
 						</NavLink>
 					</>

@@ -5,8 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-
-function Login({ type }) {
+function Login({ type, setId }) {
 	const [name, setName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [userName, setUserName] = useState("");
@@ -17,6 +16,7 @@ function Login({ type }) {
 	const [E_Email, setE_Email] = useState("");
 	const navigation = useNavigate();
 	const [users, setUsers] = useState({});
+
 	const variants = {
 		initial: {
 			opacity: 0,
@@ -57,6 +57,82 @@ function Login({ type }) {
 		}, 3000);
 		return () => clearTimeout(timeOut);
 	}, [E_Email]);
+
+	function singUp(event) {
+		event.preventDefault();
+
+		if (name.length && lastName.length && userName.length && email.length) {
+			const userID = uuidv4();
+			const usersItems = {
+				...users,
+				users: [...users.users, { name, lastName, userName, email, userID }],
+			};
+
+			const check = checkUsers(email, userName);
+
+			if (check) {
+				fetch("http://localhost:3001/users", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+					},
+					body: JSON.stringify(usersItems),
+					Cache: "default",
+				});
+				setId(userID);
+				setName("");
+				setLastName("");
+				setUserName("");
+				setEmail("");
+				window.location = "/";
+			}
+		} else {
+			name.length ? setE_name("") : setE_name("نام خود را وارد کنید");
+			lastName.length
+				? setE_LastName("")
+				: setE_LastName("نام خانوادگی خود را وارد کنید");
+			userName.length
+				? setE_Email("")
+				: setE_Email("نام کاربری خود را وارد کنید");
+			email.length ? setE_useName("") : setE_useName(" ایمیل خود راوارد کنید");
+		}
+	}
+
+	function checkUsers(UEmail, UserName) {
+		const checkedUserName = users.users.filter(
+			(user) => UserName === user.userName
+		);
+		const checkedEmail = users.users.filter((user) => UEmail === user.email);
+
+		if (checkedUserName.length && checkedEmail.length) {
+			setE_name("این نام کاربری و ایمیل ثبت شده است");
+		} else if (checkedUserName.length) {
+			setE_useName("این نام کاربری قبلا ثبت شده است");
+			return false;
+		} else if (checkedEmail.length) {
+			setE_Email("این ایمیل قبلا ثبت شده است");
+			return false;
+		} else {
+			return true;
+		}
+	}
+	function login(event) {
+		event.preventDefault();
+		if (userName.length && email.length) {
+			const findUser = users.users.filter(
+				(user) => userName === user.userName && user.email === email
+			);
+			if (findUser.length === 1) {
+				setId(findUser[0].userID);
+				window.location = "/";
+			}
+		} else {
+			userName.length
+				? setE_Email("")
+				: setE_Email("نام کاربری خود را وارد کنید");
+			email.length ? setE_useName("") : setE_useName(" ایمیل خود راوارد کنید");
+		}
+	}
 	const setForm =
 		type === "up" ? (
 			<>
@@ -84,12 +160,8 @@ function Login({ type }) {
 									const rex = /[0-9]/g;
 									const result = value.match(rex);
 									if (value.length > 10) {
-										console.log(0);
-
 										setE_name("نام نباید بیشتر از 10 کاکتر باشد");
 									} else if (result != null) {
-										console.log(1);
-
 										setE_name("لطفا از عدد در نام خود استفاد نکنید");
 									} else {
 										setName(value);
@@ -146,78 +218,27 @@ function Login({ type }) {
 					</div>
 				</div>
 				<div className="login-body" style={{ marginTop: "65px" }}>
-					<form className="login-form">
-						<input type="text" id="name" placeholder="نام کاربری" />
-						<input type="email" id="name" placeholder="ایمیل" />
-						<button>ورود</button>
+					<form className="login-form" onSubmit={login}>
+						<input
+							type="text"
+							id="name"
+							placeholder="نام کاربری"
+							value={userName}
+							onChange={(e) => setUserName(e.target.value)}
+						/>
+						<input
+							type="email"
+							id="name"
+							placeholder="ایمیل"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+						<button type="submit">ورود</button>
 					</form>
 					<Link to="/sing-up">عضویت</Link>
 				</div>
 			</>
 		);
-	function singUp(e) {
-		e.preventDefault();
-
-		if (name.length && lastName.length && userName.length && email.length) {
-			const usersItems = {
-				...users,
-				users: [
-					...users.users,
-					{ name, lastName, userName, email, userID: uuidv4() },
-				],
-			};
-
-			const check = checkUsers(email, userName);
-
-			if (check) {
-				fetch("http://localhost:3001/users", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json; charset=utf-8",
-					},
-					body: JSON.stringify(usersItems),
-					Cache: "default",
-				}).then((response) => {
-					response.json().then((data) => {
-						console.log(data);
-					});
-				});
-				setName("");
-				setLastName("");
-				setUserName("");
-				setEmail("");
-			}
-		} else {
-			console.log(name.length);
-			name.length ? setE_name("") : setE_name("نام خود را وارد کنید");
-			lastName.length
-				? setE_LastName("")
-				: setE_LastName("نام خانوادگی خود را وارد کنید");
-			userName.length
-				? setE_Email("")
-				: setE_Email("نام کاربری خود را وارد کنید");
-			email.length ? setE_useName("") : setE_useName(" ایمیل خود راوارد کنید");
-		}
-	}
-
-	function checkUsers(UEmail, UserName) {
-		const checkedUserName = users.users.filter(
-			(user) => UserName === user.userName
-		);
-		const checkedEmail = users.users.filter((user) => UEmail === user.email);
-
-		if (checkedUserName.length && checkedEmail.length) {
-			setE_name("این نام کاربری و ایمیل ثبت شده است");
-		} else if (checkedUserName.length) {
-			setE_useName("این نام کاربری قبلا ثبت شده است");
-			return false;
-		} else if (checkedEmail.length) {
-			setE_Email("این ایمیل قبلا ثبت شده است");
-			return false;
-		} else {
-			return true;
-		}
-	}
 	return (
 		<div className="login-content-other">
 			<div className="login-content-inner">{setForm}</div>
