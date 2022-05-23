@@ -1,47 +1,71 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import violin from "../../../../assets/image/violin.png";
 import "./Cart.css";
 import { Icon } from "@iconify/react";
+import { useCart } from "../../../../contexts/cart";
+import { ConvertNumberToPersian } from "../../../../Data/Data";
 
 export default function Cart() {
+	const { cartItems, deleteProduct } = useCart();
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		cartItems && setData(cartItems);
+	}, [cartItems]);
+	function deleted(event) {
+		deleteProduct(event.currentTarget.getAttribute("data-product-id"));
+	}
 	return (
 		<div className="cart">
 			<div>
-				<table>
-					<tr className="header-table">
-						<th>محصول</th>
-						<th>نام محصول</th>
-						<th>قیمت محصول</th>
-						<th>حذف</th>
-					</tr>
+				{data.length ? (
+					<>
+						<table>
+							<tr className="header-table">
+								<th>محصول</th>
+								<th>نام محصول</th>
+								<th>قیمت محصول</th>
+								<th>حذف</th>
+							</tr>
 
-					{Array(16)
-						.fill("")
-						.map((item, index) => {
-							return (
-								<>
-									<tr className="table-item">
-										<td>
-											<div className="product-img">
-												<img src={violin} alt="" />
-											</div>
-										</td>
-										<td>
-											<div className="product-caption">ویالون مدل x</div>
-										</td>
-										<td>
-											<div className="product-price">2,00,000</div>
-										</td>
-										<td>
-											<div className="btn-delete" data-product-id="1">
-												<Icon icon="ep:delete-filled" />
-											</div>
-										</td>
-									</tr>
-								</>
-							);
-						})}
-				</table>
+							{data.map((item, index) => {
+								return (
+									<>
+										<tr className="table-item">
+											<td>
+												<div className="product-img">
+													<img
+														src={`../../images/allProducts/product-${item.id}.png`}
+														alt=""
+													/>
+												</div>
+											</td>
+											<td>
+												<div className="product-caption">{item.caption}</div>
+											</td>
+											<td>
+												<div className="product-price">
+													{ConvertNumberToPersian(item.price)}
+												</div>
+											</td>
+											<td>
+												<div
+													className="btn-delete"
+													data-product-id={item.product_id}
+													onClick={deleted}
+												>
+													<Icon icon="ep:delete-filled" />
+												</div>
+											</td>
+										</tr>
+									</>
+								);
+							})}
+						</table>
+					</>
+				) : (
+					""
+				)}
 			</div>
 			<div>
 				<div className="info-cart">

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BuyProduct.css";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { useProduct } from "../../contexts/products";
+import { ConvertNumberToPersian } from "../../Data/Data";
+import { useCart } from "../../contexts/cart";
 function BuyProduct() {
+	const [info, setInfo] = useState(null);
+	const productItems = useProduct();
+	const { add } = useCart();
+	useEffect(() => {
+		productItems && setInfo(productItems);
+	}, [productItems]);
+
+	function addToCart() {
+		add(info);
+	}
 	return (
 		<div className="buy-product">
 			<motion.div
@@ -27,7 +40,7 @@ function BuyProduct() {
 				<div className="price-product">
 					<span>قیمت </span>
 					<div>
-						<span>۱,۹۳۷,۰۰۰</span>
+						<span>{info && ConvertNumberToPersian(info.price)}</span>
 						<span>تومان</span>
 					</div>
 				</div>
@@ -37,6 +50,7 @@ function BuyProduct() {
 						borderRadius: "10px",
 					}}
 					className="btn-buy"
+					onClick={addToCart}
 				>
 					افزودن به سبد
 				</motion.div>

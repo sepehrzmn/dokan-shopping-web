@@ -5,6 +5,7 @@ import Dokan from "../Dokan/Dokan";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useUser } from "../../contexts/user";
+import { useCart } from "../../contexts/cart";
 let newKnownScrollPosition = 0;
 let lastKnownScrollPosition = 0;
 
@@ -13,6 +14,7 @@ function Navbar() {
 	const [shadow, setShadow] = useState(false);
 	const [menuMobile, setMenuMobile] = useState(false);
 	const { userInfo } = useUser();
+	const { cartItems } = useCart();
 	function checkScroll() {
 		newKnownScrollPosition = window.scrollY;
 
@@ -88,6 +90,14 @@ function Navbar() {
 										src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=80"
 										alt="user"
 									/>
+
+									{cartItems.length ? (
+										<>
+											<div className="badge">{cartItems.length}</div>
+										</>
+									) : (
+										""
+									)}
 								</div>
 								<span>{userInfo[0].userName}</span>
 							</motion.div>

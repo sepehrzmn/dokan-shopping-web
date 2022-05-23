@@ -107,6 +107,7 @@ export default function Profile() {
 				cache: "default",
 			}).then(() => {
 				setSuccess("با موفقیت ثبت شد");
+				window.location = "/dashboard";
 			});
 		} else {
 			name.length ? setE_Name("") : setE_Name("نام خود را وارد کنید");

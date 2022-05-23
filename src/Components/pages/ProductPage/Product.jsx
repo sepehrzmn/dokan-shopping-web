@@ -7,21 +7,27 @@ import {
 	RelatedProducts,
 	CompleteProductInfo,
 } from "../../";
+import { ProductProvider } from "../../../contexts/products";
+import { useParams } from "react-router-dom";
 
 function Product() {
+	const { id } = useParams();
+
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
-	}, []);
+	}, [id]);
 
 	return (
 		<>
-			<div className="product-introduction">
-				<ProductSlider />
-				<ProductInformation />
-				<BuyProduct />
-			</div>
-			<RelatedProducts />
-			<CompleteProductInfo />
+			<ProductProvider id={id}>
+				<div className="product-introduction">
+					<ProductSlider />
+					<ProductInformation />
+					<BuyProduct />
+				</div>
+				<RelatedProducts />
+				<CompleteProductInfo />
+			</ProductProvider>
 		</>
 	);
 }

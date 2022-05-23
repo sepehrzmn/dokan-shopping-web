@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Information.css";
 import free from "../../assets/image/free.png";
 import location from "../../assets/image/location.png";
 import { motion } from "framer-motion";
+import { useProduct } from "../../contexts/products";
 function Information() {
+	const [info, setInfo] = useState(null);
+	const productItems = useProduct();
+	useEffect(() => {
+		productItems && setInfo(productItems);
+	}, [productItems]);
 	return (
 		<div className="product-information">
-			<h2 className="title">ویولن کد W3</h2>
+			<h2 className="title">{info && info.caption}</h2>
 			<div className="property">
 				<h3>رنگ ها</h3>
 				<div className="colors">

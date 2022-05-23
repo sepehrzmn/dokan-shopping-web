@@ -21,7 +21,6 @@ function Comments() {
 				.fill("")
 				.map((item, index) => {
 					const numberScore = Math.floor(DATA_BASE.score.number);
-					console.log(numberScore);
 					if (index + 1 <= numberScore) {
 						return (
 							<span

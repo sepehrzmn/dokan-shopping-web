@@ -9,6 +9,7 @@ import { ShoppingProvider } from "../../contexts/Shopping";
 import { CategoryProvider } from "../../contexts/category";
 import { useLocalStorage } from "../../hooks/LocalStorage";
 import { UserProvider } from "../../contexts/user";
+import { CartProvider } from "../../contexts/cart";
 
 export default function App() {
 	const [id, setId] = useLocalStorage("id");
@@ -16,85 +17,89 @@ export default function App() {
 	return (
 		<>
 			<UserProvider id={id}>
-				<Routes>
-					<Route
-						index
-						path="/"
-						element={
-							<>
-								<Navbar />
-								<HomeProvider>
-									<Home />
-								</HomeProvider>
-								<Footer />
-							</>
-						}
-					/>
-					<Route
-						path="/shopping"
-						element={
-							<>
-								<Navbar />
-								<ShoppingProvider>
-									<Shopping />
-								</ShoppingProvider>
-								<FooterShopping />
-							</>
-						}
-					/>
-					<Route
-						path="/shopping/:category"
-						element={
-							<>
-								<Navbar />
-								<ShoppingProvider>
-									<CategoryProvider>
-										<Category />
-									</CategoryProvider>
+				<CartProvider>
+					<Routes>
+						<Route
+							index
+							path="/"
+							element={
+								<>
+									<Navbar />
+									<HomeProvider>
+										<Home />
+									</HomeProvider>
+									<Footer />
+								</>
+							}
+						/>
+						<Route
+							path="/shopping"
+							element={
+								<>
+									<Navbar />
+									<ShoppingProvider>
+										<Shopping />
+									</ShoppingProvider>
 									<FooterShopping />
-								</ShoppingProvider>
-							</>
-						}
-					/>
-					<Route
-						path="/shopping/products/:id"
-						element={
-							<>
-								<Navbar />
-								<Product />
-								<FooterShopping />
-							</>
-						}
-					/>
-					{!id && (
-						<Route
-							path="/sing-up"
-							element={
-								<>
-									<Login type="up" setId={setId} />
 								</>
 							}
 						/>
-					)}
-					{!id && (
 						<Route
-							path="/sing-in"
+							path="/shopping/:category"
 							element={
 								<>
-									<Login type="in" setId={setId} />
+									<Navbar />
+									<ShoppingProvider>
+										<CategoryProvider>
+											<Category />
+										</CategoryProvider>
+										<FooterShopping />
+									</ShoppingProvider>
 								</>
 							}
 						/>
-					)}
-					<Route
-						path="/dashboard"
-						element={
-							<>
-								<Dashboard />
-							</>
-						}
-					/>
-				</Routes>
+						<Route
+							path="/shopping/products/:id"
+							element={
+								<>
+									<Navbar />
+									<Product />
+									<FooterShopping />
+								</>
+							}
+						/>
+						{!id && (
+							<Route
+								path="/sing-up"
+								element={
+									<>
+										<Login type="up" setId={setId} />
+									</>
+								}
+							/>
+						)}
+						{!id && (
+							<Route
+								path="/sing-in"
+								element={
+									<>
+										<Login type="in" setId={setId} />
+									</>
+								}
+							/>
+						)}
+						{id && (
+							<Route
+								path="/dashboard"
+								element={
+									<>
+										<Dashboard />
+									</>
+								}
+							/>
+						)}
+					</Routes>
+				</CartProvider>
 			</UserProvider>
 		</>
 	);
