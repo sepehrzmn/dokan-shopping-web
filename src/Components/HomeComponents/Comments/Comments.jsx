@@ -32,6 +32,9 @@ function Comments() {
 								height: "max-content",
 								width: window.screen.width > 800 ? "40%" : "90%",
 								overflow: "visible",
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
 							}}
 							coverflowEffect={{
 								rotate: 50,

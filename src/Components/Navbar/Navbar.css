@@ -101,7 +101,7 @@
 }
 .bg-dark-menu {
 	position: fixed;
-	height: 100vh;
+	height: 120vh;
 	width: 100%;
 	display: block;
 	background: rgba(250, 200, 106, 0.615);

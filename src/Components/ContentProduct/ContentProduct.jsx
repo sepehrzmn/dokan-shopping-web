@@ -30,7 +30,7 @@ function ContentProduct({ products, category }) {
 		setAllProduct(products);
 	}, []);
 	return (
-		<div className="ContentProduct" smooth={true} ref={content} id="products">
+		<div className="ContentProduct" ref={content} id="products">
 			<motion.div
 				className="bg-dark"
 				animate={menuMobile ? "open" : "closed"}
@@ -48,7 +48,6 @@ function ContentProduct({ products, category }) {
 				className="menu-mobile"
 				animate={menuMobile ? "open" : "closed"}
 				variants={variants}
-				style={{ position: "absolute" }}
 			>
 				<Filter />
 			</motion.div>

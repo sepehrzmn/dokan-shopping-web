@@ -11,7 +11,7 @@ function Proposal() {
 	const items = useShopping();
 	useEffect(() => {
 		setData(items);
-	}, items);
+	}, [items]);
 
 	return (
 		<div className="proposal">

@@ -181,6 +181,71 @@ function Navbar() {
 								</NavLink>
 							</li>
 						</motion.ul>
+						{userInfo.length ? (
+							<>
+								<NavLink to={"/dashboard"}>
+									<motion.div
+										className="user"
+										initial={{
+											width: "40px",
+											height: 40,
+											display: "block",
+											position: "absolute",
+											bottom: 0,
+											left: 20,
+											zIndex: 3,
+											background: "#fff",
+										}}
+										whileHover={{
+											width: "max-content",
+										}}
+									>
+										<div className="user-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=80"
+												alt="user"
+											/>
+
+											{cartItems.length ? (
+												<>
+													<div className="badge">{cartItems.length}</div>
+												</>
+											) : (
+												""
+											)}
+										</div>
+										<span>{userInfo[0].userName}</span>
+									</motion.div>
+								</NavLink>
+							</>
+						) : (
+							<>
+								<NavLink to={"/sing-up"}>
+									<motion.div
+										className="user"
+										initial={{
+											width: "40px",
+											height: 40,
+											display: "block",
+											position: "absolute",
+											bottom: 0,
+											left: 20,
+											zIndex: 6,
+											background: "#fff",
+										}}
+									>
+										<div className="user-avatar">
+											<Icon
+												icon="carbon:user-avatar-filled"
+												fontSize={40}
+												color="#bbbbbb"
+											/>
+										</div>
+										<span>عضویت/ ورود</span>
+									</motion.div>
+								</NavLink>
+							</>
+						)}
 					</>
 				)}
 			</div>

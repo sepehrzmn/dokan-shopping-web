@@ -2,6 +2,7 @@ import React from "react";
 import Dokan from "../Dokan/Dokan";
 import "./Footer.css";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 function Footer() {
 	function goUp() {
 		window.scrollTo({ top: 0, behavior: "smooth" });
@@ -12,9 +13,12 @@ function Footer() {
 				<Icon icon="bi:arrow-up-circle-fill" fontSize={40} />
 			</div>
 			<ul className="f-menu">
-				<li>صفحه اصلی</li>
-				<li>دسته بندی</li>
-				<li>محصولات</li>
+				<li>
+					<Link to={"/"}>صفحه اصلی</Link>
+				</li>
+				<li>
+					<Link to={"/shopping"}>فروشگاه</Link>
+				</li>
 			</ul>
 
 			<ul className="f-contact">

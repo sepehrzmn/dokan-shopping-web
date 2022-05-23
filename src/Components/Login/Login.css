@@ -112,4 +112,7 @@
 	.login-content-inner {
 		scale: 0.8;
 	}
+	.error-info {
+		scale: 0.8;
+	}
 }

@@ -18,7 +18,6 @@ function Content({ products }) {
 		const selBar = selectBrands();
 
 		if (output.length) {
-			console.log(0);
 			if (selCat.length) {
 				let NewRange;
 				NewRange = selCat.map((category) => {
@@ -45,7 +44,6 @@ function Content({ products }) {
 				});
 			}
 		} else {
-			console.log(1);
 			let NewRange;
 			if (selCat.length) {
 				if (selBar.length) {

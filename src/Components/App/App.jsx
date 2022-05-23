@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Footer, Navbar, FooterShopping, Login } from "../";
 import { Home, Category, Shopping, Product, Dashboard } from "../pages/index";
 import "./App.css";
@@ -98,6 +98,7 @@ export default function App() {
 								}
 							/>
 						)}
+						<Route path="*" element={<Navigate to="/" />} />
 					</Routes>
 				</CartProvider>
 			</UserProvider>

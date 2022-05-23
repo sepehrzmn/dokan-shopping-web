@@ -10,12 +10,12 @@ function Available() {
 		seExistence(Boolean(Available));
 	}, [Available]);
 	return (
-		<motion.section className="FS-available" whileHover={{}}>
+		<motion.section className="FS-available">
 			<div>فقط کالا های موجود</div>
 			<motion.div
 				className="toggle"
 				animate={{
-					background: Available ? "#ffa68d98" : "white",
+					background: Available ? "#ffa68d98" : "#ffffff",
 				}}
 				onClick={() => setAvailable(!Available)}
 			>

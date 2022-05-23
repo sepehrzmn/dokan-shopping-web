@@ -24,38 +24,28 @@ function CategoryHome() {
 					<div className="categoryHome">
 						<Swiper
 							modules={[Pagination, A11y]}
-							spaceBetween={20}
-							slidesPerView={5}
 							style={{ padding: "40px 10px" }}
 							breakpoints={{
-								"@0.0": {
-									slidesPerView: 2,
-									spaceBetween: 50,
-								},
-								"@0.75": {
-									slidesPerView: 2,
+								320: {
+									slidesPerView: 1,
 									spaceBetween: 10,
 								},
 
-								"@0.80": {
+								700: {
 									slidesPerView: 2,
 									spaceBetween: 10,
 								},
-								"@1.08": {
-									slidesPerView: 2,
+								900: {
+									slidesPerView: 3,
 									spaceBetween: 5,
 								},
-								"@1.1": {
-									slidesPerView: 3,
-									spaceBetween: 40,
-								},
-								"@1.4": {
+								1200: {
 									slidesPerView: 4,
 									spaceBetween: 40,
 								},
-								"@1.67": {
+								1500: {
 									slidesPerView: 5,
-									spaceBetween: 10,
+									spaceBetween: 40,
 								},
 							}}
 							allowTouchMove={true}
@@ -63,7 +53,14 @@ function CategoryHome() {
 						>
 							{data.newProducts.map((item, index) => {
 								return (
-									<SwiperSlide style={{ height: "30rem" }} key={item.id}>
+									<SwiperSlide
+										style={{
+											height: "30rem",
+											display: "flex",
+											justifyContent: "center",
+										}}
+										key={item.id}
+									>
 										<Product
 											caption={item.caption}
 											count={item.count}

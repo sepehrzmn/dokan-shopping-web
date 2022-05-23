@@ -20,7 +20,7 @@
 		height: 90vh;
 	}
 	.menu-mobile {
-		position: absolute !important;
+		position: absolute;
 		z-index: 2;
 		top: 10px;
 	}

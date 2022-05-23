@@ -13,14 +13,7 @@ function FooterShopping() {
 						<NavLink to="/">خانه </NavLink>
 					</li>
 					<li>
-						<NavHashLink to="#category" smooth>
-							دسته بندی
-						</NavHashLink>
-					</li>
-					<li>
-						<NavHashLink to="#products" smooth>
-							محصولات
-						</NavHashLink>
+						<NavLink to="/shopping">فروشگاه </NavLink>
 					</li>
 				</ul>
 				<ul className="footer-address">
