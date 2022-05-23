@@ -67,9 +67,9 @@ function Login({ type, setId }) {
 				...users,
 				users: [...users.users, { name, lastName, userName, email, userID }],
 			};
-
+			console.log(usersItems);
 			const check = checkUsers(email, userName);
-
+			console.log(0);
 			if (check) {
 				fetch("http://localhost:3001/users", {
 					method: "POST",
@@ -78,13 +78,14 @@ function Login({ type, setId }) {
 					},
 					body: JSON.stringify(usersItems),
 					Cache: "default",
+				}).then(() => {
+					setId(userID);
+					setName("");
+					setLastName("");
+					setUserName("");
+					setEmail("");
+					window.location = "/";
 				});
-				setId(userID);
-				setName("");
-				setLastName("");
-				setUserName("");
-				setEmail("");
-				window.location = "/";
 			}
 		} else {
 			name.length ? setE_name("") : setE_name("نام خود را وارد کنید");
