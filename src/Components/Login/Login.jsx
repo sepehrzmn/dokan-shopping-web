@@ -126,6 +126,8 @@ function Login({ type, setId }) {
 			if (findUser.length === 1) {
 				setId(findUser[0].userID);
 				window.location = "/";
+			} else {
+				setE_Email("اطلاعات رو درست وار کنید");
 			}
 		} else {
 			userName.length

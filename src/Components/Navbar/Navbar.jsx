@@ -141,6 +141,48 @@ function Navbar() {
 						}
 					></span>
 				</div>
+				{menuMobile && (
+					<motion.div
+						onClick={() => {
+							setMenuMobile(!menuMobile);
+						}}
+						className="bg-dark-menu"
+						animate={{ opacity: 1, width: "100%", height: "100vh" }}
+					/>
+				)}
+				{menuMobile && (
+					<>
+						<motion.ul
+							className="ulMobile"
+							animate={{ opacity: 1, width: "60vw", height: "40vh" }}
+						>
+							<li>
+								<NavLink
+									to="/"
+									style={({ isActive }) => {
+										return {
+											borderBottom: isActive ? "2px solid #ffd500" : "",
+										};
+									}}
+								>
+									خانه
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
+									to="/shopping"
+									style={({ isActive }) => {
+										return {
+											borderBottom: isActive ? "2px solid #ffd500" : "",
+										};
+									}}
+								>
+									فروشگاه
+								</NavLink>
+							</li>
+						</motion.ul>
+					</>
+				)}
 			</div>
 		</nav>
 	);

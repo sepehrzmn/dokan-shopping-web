@@ -15,7 +15,7 @@ export function CartProvider({ children }) {
 	}, [cart]);
 
 	function add(product) {
-		setCart((prevent) => [...prevent, { ...product }]);
+		setCart((prevent) => [...cartItems, { ...product }]);
 	}
 	function deleteProduct(id) {
 		setCart((prevent) => {
