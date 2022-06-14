@@ -1,3 +1,8 @@
+# json-server
+JSON server is a server based on node.js. It can directly host a JSON file into a web server with full restful style API, and supports cross domain, JSON, routing customization, data snapshot saving and other functions.
+for run:
+### `json-server --watch db.json --port 3001`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
